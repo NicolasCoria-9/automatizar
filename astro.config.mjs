@@ -7,5 +7,7 @@ export default defineConfig({
   output: 'server',
   adapter: node({
     mode: 'standalone'
-  })
+  }),
+  site: 'https://nicolascoria-9.github.io',
+  base: '/automatizar'
 });
