@@ -1,5 +1,6 @@
 name: Desplegar en GitHub Pages
 
+# Workflow para desplegar el sitio en GitHub Pages
 on:
   push:
     branches: [ main ]
