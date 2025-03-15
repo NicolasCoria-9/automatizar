@@ -1,0 +1,250 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Servicios - Automatizar">
+	<main>
+		<!-- Hero Section -->
+		<section class="hero position-relative mb-5">
+			<div class="hero-image">
+				<div class="hero-content">
+					<div class="container">
+						<h1 class="text-white text-center mb-4">Nuestros Servicios</h1>
+						<p class="text-white text-center lead">Soluciones integrales para la automatización industrial</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Servicios Principales -->
+		<section class="py-5">
+			<div class="container">
+				<div class="row g-4">
+					<div class="col-md-4">
+						<div class="service-card">
+							<div class="icon-wrapper mb-4">
+								<i class="fas fa-robot"></i>
+							</div>
+							<h3>Automatización Industrial</h3>
+							<ul class="service-list">
+								<li>Programación de PLC</li>
+								<li>Sistemas SCADA</li>
+								<li>Control de procesos</li>
+								<li>Integración de sistemas</li>
+								<li>Optimización de líneas de producción</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="service-card">
+							<div class="icon-wrapper mb-4">
+								<i class="fas fa-bolt"></i>
+							</div>
+							<h3>Tableros Eléctricos</h3>
+							<ul class="service-list">
+								<li>Diseño y fabricación</li>
+								<li>Tableros de control</li>
+								<li>Tableros de distribución</li>
+								<li>Centros de control de motores</li>
+								<li>Mantenimiento preventivo</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="service-card">
+							<div class="icon-wrapper mb-4">
+								<i class="fas fa-cogs"></i>
+							</div>
+							<h3>Servicios Llave en Mano</h3>
+							<ul class="service-list">
+								<li>Gestión integral de proyectos</li>
+								<li>Ingeniería y diseño</li>
+								<li>Implementación</li>
+								<li>Puesta en marcha</li>
+								<li>Capacitación del personal</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Proceso de Trabajo -->
+		<section class="py-5 bg-light">
+			<div class="container">
+				<h2 class="text-center mb-5" style="color: var(--primary-color);">Nuestro Proceso de Trabajo</h2>
+				<div class="row g-4">
+					<div class="col-md-3">
+						<div class="process-step">
+							<div class="step-number">1</div>
+							<h4>Análisis</h4>
+							<p>Evaluación detallada de sus necesidades y requerimientos específicos</p>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="process-step">
+							<div class="step-number">2</div>
+							<h4>Diseño</h4>
+							<p>Desarrollo de soluciones personalizadas y planificación del proyecto</p>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="process-step">
+							<div class="step-number">3</div>
+							<h4>Implementación</h4>
+							<p>Ejecución precisa siguiendo los más altos estándares de calidad</p>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="process-step">
+							<div class="step-number">4</div>
+							<h4>Soporte</h4>
+							<p>Asistencia continua y mantenimiento para garantizar el óptimo funcionamiento</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="py-5">
+			<div class="container">
+				<div class="cta-box text-center">
+					<h2 class="mb-4">¿Necesita una solución personalizada?</h2>
+					<p class="lead mb-4">Contáctenos para discutir su proyecto y encontrar la mejor solución para su industria</p>
+					<a href="/automatizar/contacto" class="btn btn-primary btn-lg">Solicitar Consulta</a>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	.hero {
+		position: relative;
+		background-color: var(--primary-color);
+		height: 300px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+	}
+
+	.hero::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: url('/automatizar/images/services-hero.jpg') center/cover;
+		opacity: 0.2;
+	}
+
+	.hero-content {
+		position: relative;
+		z-index: 1;
+	}
+
+	.service-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 10px;
+		box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+		height: 100%;
+		transition: transform 0.3s ease;
+	}
+
+	.service-card:hover {
+		transform: translateY(-5px);
+	}
+
+	.icon-wrapper {
+		width: 80px;
+		height: 80px;
+		background: var(--primary-color);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto;
+	}
+
+	.icon-wrapper i {
+		font-size: 2rem;
+		color: white;
+	}
+
+	.service-card h3 {
+		color: var(--primary-color);
+		text-align: center;
+		margin-bottom: 1.5rem;
+		font-size: 1.5rem;
+	}
+
+	.service-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.service-list li {
+		padding: 0.5rem 0;
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+	}
+
+	.service-list li:last-child {
+		border-bottom: none;
+	}
+
+	.process-step {
+		text-align: center;
+		padding: 2rem;
+		background: white;
+		border-radius: 10px;
+		box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+		height: 100%;
+	}
+
+	.step-number {
+		width: 50px;
+		height: 50px;
+		background: var(--primary-color);
+		color: white;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto 1rem;
+		font-size: 1.5rem;
+		font-weight: bold;
+	}
+
+	.process-step h4 {
+		color: var(--primary-color);
+		margin-bottom: 1rem;
+	}
+
+	.cta-box {
+		background: white;
+		padding: 4rem;
+		border-radius: 10px;
+		box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+	}
+
+	.cta-box h2 {
+		color: var(--primary-color);
+	}
+
+	@media (max-width: 768px) {
+		.hero {
+			height: 200px;
+		}
+
+		.cta-box {
+			padding: 2rem;
+		}
+	}
+</style>

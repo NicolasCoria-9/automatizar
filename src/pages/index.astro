@@ -1,9 +1,152 @@
 ---
-
 import Layout from '../layouts/Layout.astro';
-
 ---
 
-<Layout>
-	home
+<Layout title="Automatizar - Soluciones Tecnológicas para la Industria">
+	<main>
+		<!-- Hero Section -->
+		<section class="hero position-relative">
+			<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img src="/automatizar/images/hero1.jpg" class="d-block w-100" alt="Automatización Industrial">
+						<div class="carousel-caption">
+							<h1 class="display-4 fw-bold">Soluciones Tecnológicas para la Industria</h1>
+							<p class="lead">Automatización de procesos y servicios llave en mano</p>
+							<a href="/automatizar/contacto" class="btn btn-primary btn-lg">Contáctanos</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Categorías de Productos -->
+		<section class="py-5">
+			<div class="container">
+				<h2 class="text-center mb-5" style="color: var(--primary-color);">Nuestros Servicios</h2>
+				<div class="row g-4">
+					<div class="col-md-4">
+						<div class="card h-100">
+							<img src="/automatizar/images/automatizacion.jpg" class="card-img-top" alt="Automatización">
+							<div class="card-body">
+								<h3 class="card-title h5" style="color: var(--primary-color);">Automatización Industrial</h3>
+								<p class="card-text">Soluciones completas para automatizar procesos industriales, mejorando la eficiencia y productividad.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card h-100">
+							<img src="/automatizar/images/tableros.jpg" class="card-img-top" alt="Tableros Eléctricos">
+							<div class="card-body">
+								<h3 class="card-title h5" style="color: var(--primary-color);">Tableros Eléctricos</h3>
+								<p class="card-text">Diseño y fabricación de tableros eléctricos a medida, cumpliendo con los más altos estándares de calidad.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card h-100">
+							<img src="/automatizar/images/servicios.jpg" class="card-img-top" alt="Servicios">
+							<div class="card-body">
+								<h3 class="card-title h5" style="color: var(--primary-color);">Servicios Llave en Mano</h3>
+								<p class="card-text">Proyectos integrales desde el diseño hasta la implementación y puesta en marcha.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Por qué elegirnos -->
+		<section class="py-5 bg-light">
+			<div class="container">
+				<h2 class="text-center mb-5" style="color: var(--primary-color);">¿Por qué elegirnos?</h2>
+				<div class="row g-4">
+					<div class="col-md-4 text-center">
+						<div class="feature-box">
+							<i class="fas fa-cogs fa-3x mb-3" style="color: var(--primary-color);"></i>
+							<h3 class="h5">Experiencia Técnica</h3>
+							<p>Amplio conocimiento en automatización y control industrial</p>
+						</div>
+					</div>
+					<div class="col-md-4 text-center">
+						<div class="feature-box">
+							<i class="fas fa-check-circle fa-3x mb-3" style="color: var(--primary-color);"></i>
+							<h3 class="h5">Calidad Garantizada</h3>
+							<p>Soluciones robustas y confiables para su industria</p>
+						</div>
+					</div>
+					<div class="col-md-4 text-center">
+						<div class="feature-box">
+							<i class="fas fa-clock fa-3x mb-3" style="color: var(--primary-color);"></i>
+							<h3 class="h5">Soporte 24/7</h3>
+							<p>Asistencia técnica permanente para su tranquilidad</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contacto CTA -->
+		<section class="py-5">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-8 text-center">
+						<h2 class="mb-4" style="color: var(--primary-color);">¿Listo para automatizar su industria?</h2>
+						<p class="lead mb-4">Contáctenos hoy mismo para una consulta sin compromiso</p>
+						<a href="/automatizar/contacto" class="btn btn-primary btn-lg">Solicitar Información</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
 </Layout>
+
+<style>
+	.hero {
+		position: relative;
+		overflow: hidden;
+	}
+
+	.hero img {
+		height: 600px;
+		object-fit: cover;
+		filter: brightness(0.7);
+	}
+
+	.carousel-caption {
+		top: 50%;
+		transform: translateY(-50%);
+		bottom: auto;
+	}
+
+	.feature-box {
+		padding: 2rem;
+		background: white;
+		border-radius: 10px;
+		box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+		transition: transform 0.3s ease;
+	}
+
+	.feature-box:hover {
+		transform: translateY(-5px);
+	}
+
+	.card-img-top {
+		height: 200px;
+		object-fit: cover;
+	}
+
+	@media (max-width: 768px) {
+		.hero img {
+			height: 400px;
+		}
+
+		.carousel-caption {
+			padding: 1rem;
+		}
+
+		.carousel-caption h1 {
+			font-size: 2rem;
+		}
+	}
+</style>
