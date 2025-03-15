@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Gracias - Automatizar">
+	<main class="container my-5">
+		<div class="row justify-content-center text-center">
+			<div class="col-md-8">
+				<div class="card shadow p-5">
+					<h1 class="mb-4" style="color: rgb(17, 60, 105);">¡Gracias por contactarnos!</h1>
+					<p class="lead mb-4">Hemos recibido tu mensaje correctamente. Nos pondremos en contacto contigo lo antes posible.</p>
+					<a href="/automatizar" class="btn btn-primary px-5" style="background-color: rgb(17, 60, 105); border-color: rgb(17, 60, 105);">
+						Volver al inicio
+					</a>
+				</div>
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<style>
+.btn-primary:hover {
+	background-color: rgb(62, 125, 218) !important;
+	border-color: rgb(62, 125, 218) !important;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+.lead {
+    color: #666;
+}
+</style>

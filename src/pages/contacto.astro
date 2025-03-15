@@ -11,9 +11,11 @@ import Layout from '../layouts/Layout.astro';
 				<div class="card shadow">
 					<div class="card-body">
 						<form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
-							<input type="hidden" name="access_key" value="c5ac0b4f-3a3d-4c0c-a6c4-7d5e4f2e4f1c">
+							<!-- Reemplazar con tu clave de acceso real de Web3Forms -->
+							<input type="hidden" name="access_key" value="YOUR-ACCESS-KEY">
 							<input type="hidden" name="subject" value="Nuevo contacto desde Automatizar">
 							<input type="hidden" name="from_name" value="Automatizar Website">
+							<input type="hidden" name="redirect" value="https://nicolascoria-9.github.io/automatizar/gracias">
 							
 							<div class="mb-3">
 								<label for="nombre" class="form-label">Nombre</label>
@@ -36,8 +38,8 @@ import Layout from '../layouts/Layout.astro';
 							</div>
 							
 							<div class="mb-3">
-								<label for="comentario" class="form-label">Mensaje</label>
-								<textarea class="form-control" id="comentario" name="comentario" rows="4" required></textarea>
+								<label for="mensaje" class="form-label">Mensaje</label>
+								<textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
 							</div>
 							
 							<div class="text-center">
@@ -86,12 +88,18 @@ if (form && successMessage && errorMessage) {
                 successMessage.classList.remove('d-none');
                 errorMessage.classList.add('d-none');
                 form.reset();
+                
+                // Redirigir después de 2 segundos
+                setTimeout(() => {
+                    window.location.href = formData.get('redirect') as string;
+                }, 2000);
             } else {
                 throw new Error(data.message || 'Error al enviar el mensaje');
             }
         } catch (error) {
             successMessage.classList.add('d-none');
             errorMessage.classList.remove('d-none');
+            errorMessage.textContent = error.message || 'Error al enviar el mensaje. Por favor, intente nuevamente.';
         } finally {
             submitButton.disabled = false;
         }
@@ -107,6 +115,7 @@ if (form && successMessage && errorMessage) {
 
 .card {
     border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .form-label {
@@ -114,8 +123,28 @@ if (form && successMessage && errorMessage) {
     font-weight: 500;
 }
 
+.form-control {
+    border: 1px solid rgba(17, 60, 105, 0.2);
+    transition: all 0.3s ease;
+}
+
 .form-control:focus {
     border-color: rgb(62, 125, 218);
     box-shadow: 0 0 0 0.25rem rgba(62, 125, 218, 0.25);
+}
+
+.alert {
+    border: none;
+    border-radius: 8px;
+}
+
+.alert-success {
+    background-color: rgba(25, 135, 84, 0.1);
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: #721c24;
 }
 </style>
