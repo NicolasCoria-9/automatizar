@@ -2,137 +2,102 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout>
-    <div class="container py-5">
-        <div class="row justify-content-center">
-            <div class="col-md-8 col-lg-6">
-                <div class="card shadow">
-                    <div class="card-body p-4">
-                        <form id="contactForm" class="needs-validation" novalidate>
-                            <div class="row mb-3">
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="nombre" class="form-label">Nombre</label>
-                                        <input type="text" class="form-control custom-input" id="nombre" name="nombre" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="apellido" class="form-label">Apellido</label>
-                                        <input type="text" class="form-control custom-input" id="apellido" name="apellido" required>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control custom-input" id="email" name="email" required>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="telefono" class="form-label">Teléfono</label>
-                                <input type="tel" class="form-control custom-input" id="telefono" name="telefono" required>
-                            </div>
-
-                            <div class="mb-4">
-                                <label for="comentario" class="form-label">Comentario</label>
-                                <textarea class="form-control custom-input" id="comentario" name="comentario" rows="4" required></textarea>
-                            </div>
-
-                            <div class="alert alert-success d-none" id="successMessage" role="alert">
-                                Mensaje enviado correctamente. Nos pondremos en contacto pronto.
-                            </div>
-
-                            <div class="alert alert-danger d-none" id="errorMessage" role="alert">
-                                Hubo un error al enviar el mensaje. Por favor, intente nuevamente.
-                            </div>
-
-                            <div class="d-grid">
-                                <button type="submit" class="btn text-white" id="submitButton">
-                                    Enviar mensaje
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<Layout title="Contacto - Automatizar">
+	<main class="container my-4">
+		<h1 class="text-center mb-4" style="color: rgb(17, 60, 105);">Contacto</h1>
+		
+		<div class="row justify-content-center">
+			<div class="col-md-8">
+				<div class="card shadow">
+					<div class="card-body">
+						<form action="https://formspree.io/f/xdoqbwjw" method="POST" id="contactForm">
+							<div class="mb-3">
+								<label for="nombre" class="form-label">Nombre</label>
+								<input type="text" class="form-control" id="nombre" name="nombre" required>
+							</div>
+							
+							<div class="mb-3">
+								<label for="apellido" class="form-label">Apellido</label>
+								<input type="text" class="form-control" id="apellido" name="apellido" required>
+							</div>
+							
+							<div class="mb-3">
+								<label for="email" class="form-label">Email</label>
+								<input type="email" class="form-control" id="email" name="email" required>
+							</div>
+							
+							<div class="mb-3">
+								<label for="telefono" class="form-label">Teléfono</label>
+								<input type="tel" class="form-control" id="telefono" name="telefono">
+							</div>
+							
+							<div class="mb-3">
+								<label for="comentario" class="form-label">Mensaje</label>
+								<textarea class="form-control" id="comentario" name="comentario" rows="4" required></textarea>
+							</div>
+							
+							<div class="text-center">
+								<button type="submit" class="btn btn-primary px-5" style="background-color: rgb(17, 60, 105); border-color: rgb(17, 60, 105);">
+									Enviar Mensaje
+								</button>
+							</div>
+						</form>
+						
+						<div id="successMessage" class="alert alert-success mt-3 d-none">
+							Mensaje enviado correctamente. Nos pondremos en contacto pronto.
+						</div>
+						
+						<div id="errorMessage" class="alert alert-danger mt-3 d-none">
+							Error al enviar el mensaje. Por favor, intente nuevamente.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
 </Layout>
 
-<style>
-    .custom-input {
-        border: 1px solid #000;
-    }
-
-    .form-control:focus {
-        border-color: var(--color-secondary);
-        box-shadow: 0 0 0 0.25rem var(--color-secondary-alpha);
-    }
-
-    .btn {
-        background-color: var(--color-primary);
-    }
-
-    .btn:hover {
-        background-color: var(--color-secondary) !important;
-    }
-
-    .card {
-        border: none;
-    }
-
-    label {
-        color: var(--color-primary);
-        font-weight: 500;
-    }
-
-    .alert {
-        margin-bottom: 1rem;
-    }
-</style>
-
 <script>
-    const form = document.getElementById('contactForm') as HTMLFormElement;
-    const submitButton = document.getElementById('submitButton') as HTMLButtonElement;
-    const successMessage = document.getElementById('successMessage') as HTMLDivElement;
-    const errorMessage = document.getElementById('errorMessage') as HTMLDivElement;
+const form = document.getElementById('contactForm') as HTMLFormElement;
+const successMessage = document.getElementById('successMessage') as HTMLDivElement;
+const errorMessage = document.getElementById('errorMessage') as HTMLDivElement;
 
-    if (form && submitButton && successMessage && errorMessage) {
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            // Ocultar mensajes previos
-            successMessage.classList.add('d-none');
-            errorMessage.classList.add('d-none');
-            
-            // Deshabilitar botón mientras se envía
-            submitButton.disabled = true;
-            submitButton.innerHTML = 'Enviando...';
-
-            try {
-                const formData = new FormData(form);
-                const response = await fetch('/api/enviar-contacto', {
-                    method: 'POST',
-                    body: formData
-                });
-
-                const data = await response.json();
-
-                if (response.ok) {
-                    successMessage.classList.remove('d-none');
-                    form.reset();
-                } else {
-                    errorMessage.textContent = data.error || 'Error al enviar el mensaje';
-                    errorMessage.classList.remove('d-none');
-                }
-            } catch (error) {
-                errorMessage.textContent = 'Error al enviar el mensaje';
-                errorMessage.classList.remove('d-none');
-            } finally {
-                submitButton.disabled = false;
-                submitButton.innerHTML = 'Enviar mensaje';
-            }
-        });
-    }
+if (form && successMessage && errorMessage) {
+    form.addEventListener('submit', function(e) {
+        const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+        
+        submitButton.disabled = true;
+        
+        // Formspree maneja el envío automáticamente
+        successMessage.classList.remove('d-none');
+        errorMessage.classList.add('d-none');
+        
+        // Limpiar el formulario después de 2 segundos
+        setTimeout(() => {
+            form.reset();
+            submitButton.disabled = false;
+        }, 2000);
+    });
+}
 </script>
+
+<style>
+.btn-primary:hover {
+	background-color: rgb(62, 125, 218) !important;
+	border-color: rgb(62, 125, 218) !important;
+}
+
+.card {
+    border: none;
+}
+
+.form-label {
+    color: rgb(17, 60, 105);
+    font-weight: 500;
+}
+
+.form-control:focus {
+    border-color: rgb(62, 125, 218);
+    box-shadow: 0 0 0 0.25rem rgba(62, 125, 218, 0.25);
+}
+</style>
