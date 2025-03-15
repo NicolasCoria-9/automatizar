@@ -1,5 +1,49 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Resend } from 'resend';
+
+const resend = new Resend(import.meta.env.RESEND_API_KEY);
+
+export const prerender = false;
+
+if (Astro.request.method === 'POST') {
+  try {
+    const data = await Astro.request.formData();
+    const nombre = data.get('nombre');
+    const apellido = data.get('apellido');
+    const email = data.get('email');
+    const telefono = data.get('telefono');
+    const comentario = data.get('comentario');
+
+    await resend.emails.send({
+      from: 'Automatizar <onboarding@resend.dev>',
+      to: import.meta.env.EMAIL_TO,
+      subject: import.meta.env.EMAIL_SUBJECT,
+      html: `
+        <h2>Nuevo mensaje de contacto</h2>
+        <p><strong>Nombre:</strong> ${nombre} ${apellido}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Teléfono:</strong> ${telefono}</p>
+        <p><strong>Mensaje:</strong></p>
+        <p>${comentario}</p>
+      `
+    });
+  } catch (error) {
+    return new Response(JSON.stringify({ error: 'Error al enviar el mensaje' }), {
+      status: 500,
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+  }
+
+  return new Response(JSON.stringify({ message: 'Mensaje enviado correctamente' }), {
+    status: 200,
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
+}
 ---
 
 <Layout title="Contacto - Automatizar">
@@ -10,7 +54,7 @@ import Layout from '../layouts/Layout.astro';
 			<div class="col-md-8">
 				<div class="card shadow">
 					<div class="card-body">
-						<form action="https://formspree.io/f/xdoqbwjw" method="POST" id="contactForm">
+						<form method="POST" id="contactForm">
 							<div class="mb-3">
 								<label for="nombre" class="form-label">Nombre</label>
 								<input type="text" class="form-control" id="nombre" name="nombre" required>
@@ -63,20 +107,33 @@ const successMessage = document.getElementById('successMessage') as HTMLDivEleme
 const errorMessage = document.getElementById('errorMessage') as HTMLDivElement;
 
 if (form && successMessage && errorMessage) {
-    form.addEventListener('submit', function(e) {
-        const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
         
+        const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement;
         submitButton.disabled = true;
         
-        // Formspree maneja el envío automáticamente
-        successMessage.classList.remove('d-none');
-        errorMessage.classList.add('d-none');
-        
-        // Limpiar el formulario después de 2 segundos
-        setTimeout(() => {
-            form.reset();
+        try {
+            const response = await fetch(form.action || window.location.href, {
+                method: 'POST',
+                body: new FormData(form)
+            });
+            
+            const data = await response.json();
+            
+            if (response.ok) {
+                successMessage.classList.remove('d-none');
+                errorMessage.classList.add('d-none');
+                form.reset();
+            } else {
+                throw new Error(data.error || 'Error al enviar el mensaje');
+            }
+        } catch (error) {
+            successMessage.classList.add('d-none');
+            errorMessage.classList.remove('d-none');
+        } finally {
             submitButton.disabled = false;
-        }, 2000);
+        }
     });
 }
 </script>
