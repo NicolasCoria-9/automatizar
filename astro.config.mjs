@@ -8,6 +8,6 @@ export default defineConfig({
   adapter: node({
     mode: 'standalone'
   }),
-  site: 'https://github.com/NicolasCoria-9',
+  site: 'https://NicolasCoria-9.github.io',
   base: 'automatizar'
 });
