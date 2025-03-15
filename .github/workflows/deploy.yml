@@ -26,10 +26,10 @@ jobs:
           EMAIL_SUBJECT: ${{ secrets.EMAIL_SUBJECT }}
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
           
-      - name: Subir artefacto
-        uses: actions/upload-pages-artifact@v1
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: dist
 
   deploy:
     needs: build
@@ -41,6 +41,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Desplegar en GitHub Pages
+      - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
