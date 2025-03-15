@@ -10,8 +10,7 @@ import Layout from '../layouts/Layout.astro';
 			<div class="col-md-8">
 				<div class="card shadow">
 					<div class="card-body">
-						<form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
-							<!-- Reemplazar con tu clave de acceso real de Web3Forms -->
+						<form action="https://api.web3forms.com/submit" method="POST">
 							<input type="hidden" name="access_key" value="04eda78e-e58a-4822-ac83-d748466a31f2">
 							<input type="hidden" name="subject" value="Nuevo contacto desde Automatizar">
 							<input type="hidden" name="from_name" value="Automatizar Website">
@@ -48,64 +47,12 @@ import Layout from '../layouts/Layout.astro';
 								</button>
 							</div>
 						</form>
-						
-						<div id="successMessage" class="alert alert-success mt-3 d-none">
-							Mensaje enviado correctamente. Nos pondremos en contacto pronto.
-						</div>
-						
-						<div id="errorMessage" class="alert alert-danger mt-3 d-none">
-							Error al enviar el mensaje. Por favor, intente nuevamente.
-						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</main>
 </Layout>
-
-<script>
-const form = document.getElementById('contactForm') as HTMLFormElement;
-const successMessage = document.getElementById('successMessage') as HTMLDivElement;
-const errorMessage = document.getElementById('errorMessage') as HTMLDivElement;
-
-if (form && successMessage && errorMessage) {
-    form.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
-        const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement;
-        submitButton.disabled = true;
-        
-        try {
-            const formData = new FormData(form);
-            const response = await fetch(form.action, {
-                method: 'POST',
-                body: formData
-            });
-            
-            const data = await response.json();
-            
-            if (response.ok) {
-                successMessage.classList.remove('d-none');
-                errorMessage.classList.add('d-none');
-                form.reset();
-                
-                // Redirigir después de 2 segundos
-                setTimeout(() => {
-                    window.location.href = formData.get('redirect') as string;
-                }, 2000);
-            } else {
-                throw new Error(data.message || 'Error al enviar el mensaje');
-            }
-        } catch (error) {
-            successMessage.classList.add('d-none');
-            errorMessage.classList.remove('d-none');
-            errorMessage.textContent = error.message || 'Error al enviar el mensaje. Por favor, intente nuevamente.';
-        } finally {
-            submitButton.disabled = false;
-        }
-    });
-}
-</script>
 
 <style>
 .btn-primary:hover {
