@@ -22,10 +22,6 @@ jobs:
         
       - name: Construir sitio web
         run: npm run build
-        env:
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-          EMAIL_SUBJECT: ${{ secrets.EMAIL_SUBJECT }}
-          EMAIL_TO: ${{ secrets.EMAIL_TO }}
           
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
