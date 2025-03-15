@@ -1,99 +1,132 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import Logo from '../assets/logo.png';
+import Portada from '../assets/portada.jpg';
 ---
 
 <Layout title="Automatizar - Soluciones Tecnológicas para la Industria">
 	<main>
 		<!-- Hero Section -->
 		<section class="hero position-relative">
-			<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-				<div class="carousel-inner">
-					<div class="carousel-item active">
-						<img src="/automatizar/images/hero1.jpg" class="d-block w-100" alt="Automatización Industrial">
-						<div class="carousel-caption">
-							<h1 class="display-4 fw-bold">Soluciones Tecnológicas para la Industria</h1>
-							<p class="lead">Automatización de procesos y servicios llave en mano</p>
-							<a href="/automatizar/contacto" class="btn btn-primary btn-lg">Contáctanos</a>
+			<div class="hero-content">
+				<div class="container">
+					<div class="row align-items-center min-vh-100">
+						<div class="col-lg-6 text-center text-lg-start">
+							<div class="hero-text">
+								<h1 class="display-4 text-white mb-4">Soluciones Tecnológicas para la Industria</h1>
+								<p class="lead text-white mb-4">Automatización, control y servicios llave en mano</p>
+								<a href="/automatizar/contacto" class="btn btn-primary btn-lg">Contáctenos</a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Categorías de Productos -->
-		<section class="py-5">
+		<!-- Categorías Section -->
+		<section class="categories py-5">
 			<div class="container">
-				<h2 class="text-center mb-5" style="color: var(--primary-color);">Nuestros Servicios</h2>
+				<h2 class="text-center mb-5" style="color: rgb(17, 60, 105);">Nuestras Soluciones</h2>
 				<div class="row g-4">
 					<div class="col-md-4">
-						<div class="card h-100">
-							<img src="/automatizar/images/automatizacion.jpg" class="card-img-top" alt="Automatización">
-							<div class="card-body">
-								<h3 class="card-title h5" style="color: var(--primary-color);">Automatización Industrial</h3>
-								<p class="card-text">Soluciones completas para automatizar procesos industriales, mejorando la eficiencia y productividad.</p>
+						<div class="category-card">
+							<div class="category-icon">
+								<i class="fas fa-cogs"></i>
 							</div>
+							<h3>Automatización Industrial</h3>
+							<ul class="category-list">
+								<li>PLCs y HMIs</li>
+								<li>Sistemas SCADA</li>
+								<li>Control de procesos</li>
+								<li>Instrumentación</li>
+							</ul>
+							<a href="/automatizar/servicios#automatizacion" class="category-link">
+								Ver más <i class="fas fa-arrow-right"></i>
+							</a>
 						</div>
 					</div>
 					<div class="col-md-4">
-						<div class="card h-100">
-							<img src="/automatizar/images/tableros.jpg" class="card-img-top" alt="Tableros Eléctricos">
-							<div class="card-body">
-								<h3 class="card-title h5" style="color: var(--primary-color);">Tableros Eléctricos</h3>
-								<p class="card-text">Diseño y fabricación de tableros eléctricos a medida, cumpliendo con los más altos estándares de calidad.</p>
+						<div class="category-card">
+							<div class="category-icon">
+								<i class="fas fa-bolt"></i>
 							</div>
+							<h3>Tableros Eléctricos</h3>
+							<ul class="category-list">
+								<li>Tableros de control</li>
+								<li>Tableros de distribución</li>
+								<li>CCMs</li>
+								<li>Tableros especiales</li>
+							</ul>
+							<a href="/automatizar/servicios#tableros" class="category-link">
+								Ver más <i class="fas fa-arrow-right"></i>
+							</a>
 						</div>
 					</div>
 					<div class="col-md-4">
-						<div class="card h-100">
-							<img src="/automatizar/images/servicios.jpg" class="card-img-top" alt="Servicios">
-							<div class="card-body">
-								<h3 class="card-title h5" style="color: var(--primary-color);">Servicios Llave en Mano</h3>
-								<p class="card-text">Proyectos integrales desde el diseño hasta la implementación y puesta en marcha.</p>
+						<div class="category-card">
+							<div class="category-icon">
+								<i class="fas fa-microchip"></i>
 							</div>
+							<h3>Industria 4.0</h3>
+							<ul class="category-list">
+								<li>IoT Industrial</li>
+								<li>Análisis de datos</li>
+								<li>Sistemas MES</li>
+								<li>Digitalización</li>
+							</ul>
+							<a href="/automatizar/servicios#industria40" class="category-link">
+								Ver más <i class="fas fa-arrow-right"></i>
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Por qué elegirnos -->
-		<section class="py-5 bg-light">
+		<!-- Features Section -->
+		<section class="features py-5 bg-light">
 			<div class="container">
-				<h2 class="text-center mb-5" style="color: var(--primary-color);">¿Por qué elegirnos?</h2>
 				<div class="row g-4">
-					<div class="col-md-4 text-center">
-						<div class="feature-box">
-							<i class="fas fa-cogs fa-3x mb-3" style="color: var(--primary-color);"></i>
-							<h3 class="h5">Experiencia Técnica</h3>
-							<p>Amplio conocimiento en automatización y control industrial</p>
+					<div class="col-md-4">
+						<div class="feature-box text-center">
+							<div class="feature-icon">
+								<i class="fas fa-lightbulb"></i>
+							</div>
+							<h3>Innovación Tecnológica</h3>
+							<p>Implementamos las últimas tecnologías para optimizar sus procesos industriales</p>
 						</div>
 					</div>
-					<div class="col-md-4 text-center">
-						<div class="feature-box">
-							<i class="fas fa-check-circle fa-3x mb-3" style="color: var(--primary-color);"></i>
-							<h3 class="h5">Calidad Garantizada</h3>
-							<p>Soluciones robustas y confiables para su industria</p>
+					<div class="col-md-4">
+						<div class="feature-box text-center">
+							<div class="feature-icon">
+								<i class="fas fa-certificate"></i>
+							</div>
+							<h3>Calidad Garantizada</h3>
+							<p>Trabajamos con los más altos estándares de calidad y seguridad</p>
 						</div>
 					</div>
-					<div class="col-md-4 text-center">
-						<div class="feature-box">
-							<i class="fas fa-clock fa-3x mb-3" style="color: var(--primary-color);"></i>
-							<h3 class="h5">Soporte 24/7</h3>
-							<p>Asistencia técnica permanente para su tranquilidad</p>
+					<div class="col-md-4">
+						<div class="feature-box text-center">
+							<div class="feature-icon">
+								<i class="fas fa-handshake"></i>
+							</div>
+							<h3>Servicio Integral</h3>
+							<p>Acompañamos a nuestros clientes en todo el proceso del proyecto</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Contacto CTA -->
-		<section class="py-5">
+		<!-- CTA Section -->
+		<section class="cta py-5">
 			<div class="container">
 				<div class="row justify-content-center">
-					<div class="col-md-8 text-center">
-						<h2 class="mb-4" style="color: var(--primary-color);">¿Listo para automatizar su industria?</h2>
-						<p class="lead mb-4">Contáctenos hoy mismo para una consulta sin compromiso</p>
-						<a href="/automatizar/contacto" class="btn btn-primary btn-lg">Solicitar Información</a>
+					<div class="col-lg-8 text-center">
+						<h2 class="text-white mb-4">¿Listo para automatizar su industria?</h2>
+						<p class="lead text-white mb-4">Contáctenos para discutir su próximo proyecto</p>
+						<a href="/automatizar/contacto" class="btn btn-light btn-lg">Solicitar Cotización</a>
 					</div>
 				</div>
 			</div>
@@ -102,28 +135,120 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
+	:root {
+		--primary-color: rgb(17, 60, 105);
+		--secondary-color: rgb(62, 125, 218);
+	}
+
 	.hero {
+		margin-top: -180px;
+		min-height: 100vh;
 		position: relative;
 		overflow: hidden;
 	}
 
-	.hero img {
-		height: 600px;
+	.hero-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 		object-fit: cover;
-		filter: brightness(0.7);
+		z-index: 1;
 	}
 
-	.carousel-caption {
-		top: 50%;
-		transform: translateY(-50%);
-		bottom: auto;
+	.hero-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(rgba(17, 60, 105, 0.85), rgba(17, 60, 105, 0.85));
+		z-index: 2;
+	}
+
+	.hero-content {
+		position: relative;
+		z-index: 3;
+		padding-top: 180px;
+	}
+
+	.hero-text {
+		max-width: 600px;
+	}
+
+	.hero-logo img {
+		filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
+	}
+
+	.categories {
+		background-color: #fff;
+	}
+
+	.category-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 10px;
+		box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+		height: 100%;
+		transition: transform 0.3s ease;
+	}
+
+	.category-card:hover {
+		transform: translateY(-5px);
+	}
+
+	.category-icon {
+		width: 80px;
+		height: 80px;
+		margin: 0 auto 1.5rem;
+		background: var(--primary-color);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: white;
+		font-size: 2rem;
+	}
+
+	.category-card h3 {
+		color: var(--primary-color);
+		text-align: center;
+		margin-bottom: 1.5rem;
+		font-size: 1.5rem;
+	}
+
+	.category-list {
+		list-style: none;
+		padding: 0;
+		margin: 0 0 1.5rem;
+	}
+
+	.category-list li {
+		padding: 0.5rem 0;
+		border-bottom: 1px solid #eee;
+		color: #666;
+	}
+
+	.category-link {
+		display: block;
+		text-align: right;
+		color: var(--secondary-color);
+		text-decoration: none;
+		font-weight: 500;
+		transition: color 0.3s ease;
+	}
+
+	.category-link:hover {
+		color: var(--primary-color);
 	}
 
 	.feature-box {
 		padding: 2rem;
 		background: white;
 		border-radius: 10px;
-		box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+		box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+		height: 100%;
 		transition: transform 0.3s ease;
 	}
 
@@ -131,22 +256,56 @@ import Layout from '../layouts/Layout.astro';
 		transform: translateY(-5px);
 	}
 
-	.card-img-top {
-		height: 200px;
-		object-fit: cover;
+	.feature-icon {
+		font-size: 2.5rem;
+		color: var(--primary-color);
+		margin-bottom: 1.5rem;
 	}
 
-	@media (max-width: 768px) {
-		.hero img {
-			height: 400px;
+	.feature-box h3 {
+		color: var(--primary-color);
+		margin-bottom: 1rem;
+	}
+
+	.cta {
+		background: var(--primary-color);
+		position: relative;
+	}
+
+	.cta::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: url('/automatizar/images/cta-bg.jpg') center/cover;
+		opacity: 0.1;
+	}
+
+	@media (max-width: 991px) {
+		.hero {
+			margin-top: -130px;
 		}
 
-		.carousel-caption {
-			padding: 1rem;
+		.hero-content {
+			padding-top: 130px;
 		}
 
-		.carousel-caption h1 {
-			font-size: 2rem;
+		.hero-text {
+			text-align: center;
+			margin: 0 auto;
+		}
+
+		.hero-logo {
+			max-width: 300px;
+			margin: 0 auto;
+		}
+	}
+
+	@media (max-width: 576px) {
+		.hero-logo {
+			max-width: 250px;
 		}
 	}
 </style>
