@@ -5,63 +5,42 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Contacto - Automatizar">
 	<main>
 		<!-- Hero Section -->
-		<section class="hero position-relative mb-5">
-			<div class="hero-image">
-				<div class="hero-content">
-					<div class="container">
-						<h1 class="text-white text-center mb-4">Contacto</h1>
-						<p class="text-white text-center lead">Estamos aquí para ayudarte con tus proyectos de automatización</p>
-					</div>
+		<section class="hero position-relative">
+			<div class="hero-overlay"></div>
+			<div class="hero-bg" style="background-image: url('/src/assets/portada.jpg');"></div>
+			<div class="hero-content">
+				<div class="container">
+					<h1 class="text-white text-center mb-4">Contacto</h1>
+					<p class="text-white text-center lead">Estamos aquí para ayudarte con tus proyectos de automatización</p>
 				</div>
 			</div>
 		</section>
-
+		
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-8">
 					<div class="card shadow">
 						<div class="card-body p-4">
-							<form action="https://formspree.io/f/xdoqbwjw" method="POST">
-								<div class="row">
-									<div class="col-md-6 mb-3">
+							<div class="container">
+								<h2 class="text-primary">Contacto</h2>
+								<form action="https://api.web3forms.com/submit" method="POST">
+									<input type="hidden" name="access_key" value="ec4b1c0c-ca86-4aa5-9eda-50d4df215bc6" />
+									<input type="hidden" name="subject" value="Nuevo envío de formulario de contacto" />
+									<div class="mb-3">
 										<label for="nombre" class="form-label">Nombre</label>
 										<input type="text" class="form-control" id="nombre" name="nombre" required>
 									</div>
-									
-									<div class="col-md-6 mb-3">
-										<label for="apellido" class="form-label">Apellido</label>
-										<input type="text" class="form-control" id="apellido" name="apellido" required>
-									</div>
-								</div>
-
-								<div class="row">
-									<div class="col-md-6 mb-3">
-										<label for="email" class="form-label">Email</label>
+									<div class="mb-3">
+										<label for="email" class="form-label">Correo Electrónico</label>
 										<input type="email" class="form-control" id="email" name="email" required>
 									</div>
-									
-									<div class="col-md-6 mb-3">
-										<label for="telefono" class="form-label">Teléfono</label>
-										<input type="tel" class="form-control" id="telefono" name="telefono">
+									<div class="mb-3">
+										<label for="mensaje" class="form-label">Mensaje</label>
+										<textarea class="form-control" id="mensaje" name="mensaje" rows="3" required></textarea>
 									</div>
-								</div>
-
-								<div class="mb-3">
-									<label for="empresa" class="form-label">Empresa</label>
-									<input type="text" class="form-control" id="empresa" name="empresa">
-								</div>
-
-								<div class="mb-3">
-									<label for="mensaje" class="form-label">Mensaje</label>
-									<textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
-								</div>
-								
-								<div class="text-center">
-									<button type="submit" class="btn btn-primary btn-lg px-5">
-										Enviar Mensaje
-									</button>
-								</div>
-							</form>
+									<button type="submit" class="btn btn-secondary">Enviar</button>
+								</form>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -74,22 +53,24 @@ import Layout from '../layouts/Layout.astro';
 								<div class="d-flex mb-3">
 									<i class="fas fa-phone me-3" style="color: var(--primary-color);"></i>
 									<div>
-										<h4 class="h6 mb-1">Teléfono</h4>
-										<p class="mb-0">(11) 1234-5678</p>
+										<h4 class="h6 mb-1">Teléfonos</h4>
+										<p class="mb-1"><i style="color: var(--primary-color);"></i> <a href="https://wa.me/5493492205717?text=Hola%20automatizAR,%20soy%20( ),%20quería%20hacerte%20una%20consulta." class="text-primary">Luciano: +54 9 3492 20-5717</a></p>
+										<p class="mb-1"><i style="color: var(--primary-color);"></i> <a href="https://wa.me/5493492620419?text=Hola%20automatizAR,%20soy%20( ),%20quería%20hacerte%20una%20consulta." class="text-primary">Emanuel: +54 9 3492 62-0419</a></p>
+										<p class="mb-1"><i style="color: var(--primary-color);"></i> <a href="https://wa.me/5493492328782?text=Hola%20automatizAR,%20soy%20( ),%20quería%20hacerte%20una%20consulta." class="text-primary">Nicolás: +54 9 3492 32-8782</a></p>
 									</div>
 								</div>
 								<div class="d-flex mb-3">
 									<i class="fas fa-envelope me-3" style="color: var(--primary-color);"></i>
 									<div>
 										<h4 class="h6 mb-1">Email</h4>
-										<p class="mb-0">info@automatizar.com</p>
+										<p class="mb-0">automatizar.sa@gmail.com</p>
 									</div>
 								</div>
 								<div class="d-flex">
 									<i class="fas fa-map-marker-alt me-3" style="color: var(--primary-color);"></i>
 									<div>
 										<h4 class="h6 mb-1">Ubicación</h4>
-										<p class="mb-0">Buenos Aires, Argentina</p>
+										<p class="mb-0">Rafaela, Santa Fe. Argentina</p>
 									</div>
 								</div>
 							</div>
@@ -100,11 +81,11 @@ import Layout from '../layouts/Layout.astro';
 								<h3 class="h5 mb-4" style="color: var(--primary-color);">Horario de Atención</h3>
 								<div class="d-flex justify-content-between mb-2">
 									<span>Lunes - Viernes:</span>
-									<span>9:00 - 18:00</span>
+									<span>8:00 - 18:00</span>
 								</div>
 								<div class="d-flex justify-content-between">
-									<span>Sábados:</span>
-									<span>9:00 - 13:00</span>
+									<span>Sábados y Domingos:</span>
+									<span>8:00 - 13:00</span>
 								</div>
 							</div>
 						</div>
@@ -114,6 +95,83 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 	</main>
 </Layout>
+
+<script>
+	
+(function () {
+	"use strict";
+	/*
+	 * Form Validation
+	 */
+  
+	// Fetch all the forms we want to apply custom validation styles to
+	const forms = document.querySelectorAll(".needs-validation");
+	const result = document.getElementById("result");
+	// Loop over them and prevent submission
+	Array.prototype.slice.call(forms).forEach(function (form) {
+	  form.addEventListener(
+		"submit",
+		function (event) {
+		  if (!form.checkValidity()) {
+			event.preventDefault();
+			event.stopPropagation();
+  
+			form.querySelectorAll(":invalid")[0].focus();
+		  } else {
+			/*
+			 * Form Submission using fetch()
+			 */
+  
+			const formData = new FormData(form);
+			event.preventDefault();
+			event.stopPropagation();
+			const object = {};
+			formData.forEach((value, key) => {
+			  object[key] = value;
+			});
+			const json = JSON.stringify(object);
+			result.innerHTML = "Please wait...";
+  
+			fetch("https://api.web3forms.com/submit", {
+			  method: "POST",
+			  headers: {
+				"Content-Type": "application/json",
+				Accept: "application/json"
+			  },
+			  body: json
+			})
+			  .then(async (response) => {
+				let json = await response.json();
+				if (response.status == 200) {
+				  result.innerHTML = json.message;
+				  result.classList.remove("text-gray-500");
+				  result.classList.add("text-green-500");
+				} else {
+				  console.log(response);
+				  result.innerHTML = json.message;
+				  result.classList.remove("text-gray-500");
+				  result.classList.add("text-red-500");
+				}
+			  })
+			  .catch((error) => {
+				console.log(error);
+				result.innerHTML = "Something went wrong!";
+			  })
+			  .then(function () {
+				form.reset();
+				form.classList.remove("was-validated");
+				setTimeout(() => {
+				  result.style.display = "none";
+				}, 5000);
+			  });
+		  }
+		  form.classList.add("was-validated");
+		},
+		false
+	  );
+	});
+  })();	
+</script>
 
 <style>
 	.hero {
