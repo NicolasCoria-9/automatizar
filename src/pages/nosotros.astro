@@ -19,29 +19,35 @@ import Layout from '../layouts/Layout.astro';
 		<!-- Quiénes Somos -->
 		<section class="py-5">
 			<div class="container">
-				<div class="row align-items-center g-5">
+				<div class="row align-items-center g-5 text-center">
 					<div class="col-lg-6">
 						<div class="about-image">
-							<img src="/automatizar/images/about-main.jpg" alt="Equipo Automatizar" class="img-fluid rounded shadow">
+							<img src="/src/assets/automation.jpeg" alt="Equipo Automatizar" class="img-fluid rounded shadow" style="height: 100%; width: 100%; object-fit: cover; max-height: 400px;">
 						</div>
 					</div>
 					<div class="col-lg-6">
 						<div class="about-content">
-							<h2 class="mb-4" style="color: var(--primary-color);">Nuestra Historia</h2>
-							<p class="lead mb-4">Somos una empresa líder en automatización industrial y servicios tecnológicos, dedicada a optimizar los procesos productivos de nuestros clientes.</p>
-							<p class="mb-4">Con años de experiencia en el mercado, nos especializamos en brindar soluciones integrales que incluyen automatización de procesos, armado de tableros eléctricos y servicios llave en mano para la industria.</p>
-							<div class="mission-values">
-								<div class="mission-item">
-									<i class="fas fa-bullseye"></i>
-									<h4>Misión</h4>
-									<p>Proporcionar soluciones tecnológicas innovadoras que mejoren la eficiencia y productividad de nuestros clientes.</p>
-								</div>
-								<div class="mission-item">
-									<i class="fas fa-eye"></i>
-									<h4>Visión</h4>
-									<p>Ser referentes en la automatización industrial, reconocidos por nuestra excelencia y compromiso con la innovación.</p>
-								</div>
-							</div>
+							<h1 class="text-center mb-5" style="color: var(--primary-color);">¿Quiénes Somos?</h1>
+							<p class="text-start">En AutomatizAR, somos un equipo apasionado y comprometido con la innovación en el campo de la automatización industrial. Nos especializamos en la comercialización e integración de soluciones que optimizan los procesos productivos de nuestros clientes. Con un enfoque "llave en mano", aseguramos que cada proyecto sea gestionado con la máxima atención al detalle, desde la provisión de equipos hasta la instalación, puesta en marcha y servicio de posventa.</p>
+							<p class="text-start">Nuestra experiencia en el sector nos permite ofrecer un servicio completo y personalizado, adaptándonos a las necesidades específicas de cada cliente. Nos enorgullece acompañar a las pequeñas y medianas empresas en Rafaela y la región, ayudándolas a acceder a tecnología de vanguardia que mejora su eficiencia y competitividad.</p>
+							<p class="text-start">En AutomatizAR, creemos que la clave del éxito radica en construir relaciones sólidas y de confianza con nuestros clientes, basadas en la transparencia y el compromiso. Estamos aquí para transformar la industria, un proyecto a la vez.</p>
+							
+						</div>
+					</div>	
+				</div>
+				<div class="row g-4 text-center">
+					<div class="col-md-6">
+						<div class="mission-item border p-3 rounded shadow">
+							<i class="fas fa-bullseye"></i>
+							<h4>Misión</h4>
+							<p class="text-start">Facilitar el acceso a soluciones de automatización industrial innovadoras, brindando un servicio integral y personalizado que optimice los procesos productivos de las pequeñas y medianas empresas en Rafaela y la región. Nos comprometemos a ofrecer tecnología de vanguardia con un enfoque "llave en mano", asegurando calidad, eficiencia y acompañamiento en cada etapa del proceso.</p>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="mission-item border p-3 rounded shadow">
+							<i class="fas fa-eye"></i>
+							<h4>Visión</h4>
+							<p class="text-start">Ser la empresa líder en automatización industrial en la región, reconocida por su excelencia en integración tecnológica, confiabilidad en el servicio y compromiso con la modernización de la industria nacional.</p>
 						</div>
 					</div>
 				</div>
@@ -52,32 +58,52 @@ import Layout from '../layouts/Layout.astro';
 		<section class="py-5 bg-light">
 			<div class="container">
 				<h2 class="text-center mb-5" style="color: var(--primary-color);">Nuestros Valores</h2>
-				<div class="row g-4">
+				<div class="row g-4 text-center">
 					<div class="col-md-4">
-						<div class="value-card">
+						<div class="value-card border p-3 rounded shadow">
 							<div class="value-icon">
-								<i class="fas fa-star"></i>
+								<i class="fas fa-chart-line"></i>
 							</div>
-							<h3>Excelencia</h3>
-							<p>Buscamos la máxima calidad en cada proyecto, superando las expectativas de nuestros clientes.</p>
+							<h3>Eficiencia</h3>
+							<p>Buscamos la optimización de los procesos industriales para maximizar la productividad y rentabilidad de nuestros clientes.</p>
 						</div>
 					</div>
 					<div class="col-md-4">
-						<div class="value-card">
+						<div class="value-card border p-3 rounded shadow">
 							<div class="value-icon">
 								<i class="fas fa-handshake"></i>
 							</div>
 							<h3>Compromiso</h3>
-							<p>Nos dedicamos a entender y resolver las necesidades específicas de cada cliente.</p>
+							<p>Acompañamos a nuestros clientes en cada etapa del proceso con un servicio integral y personalizado.</p>
 						</div>
 					</div>
 					<div class="col-md-4">
-						<div class="value-card">
+						<div class="value-card border p-3 rounded shadow">
 							<div class="value-icon">
 								<i class="fas fa-lightbulb"></i>
 							</div>
 							<h3>Innovación</h3>
-							<p>Implementamos las últimas tecnologías para ofrecer soluciones de vanguardia.</p>
+							<p>Apostamos por la tecnología como motor de transformación y mejora continua.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row g-4 text-center">
+					<div class="col-md-6">
+						<div class="value-card border p-3 rounded shadow">
+							<div class="value-icon">
+								<i class="fas fa-people-carry"></i>
+							</div>
+							<h3>Confianza</h3>
+							<p>Construimos relaciones sólidas basadas en la transparencia, el cumplimiento y el soporte técnico continuo.</p>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="value-card border p-3 rounded shadow">
+							<div class="value-icon">
+								<i class="fas fa-check"></i>
+							</div>
+							<h3>Calidad</h3>
+							<p>Trabajamos con las mejores marcas y soluciones para garantizar resultados eficientes y duraderos.</p>
 						</div>
 					</div>
 				</div>
@@ -92,11 +118,11 @@ import Layout from '../layouts/Layout.astro';
 					<div class="col-md-4">
 						<div class="team-card">
 							<div class="team-image">
-								<img src="/automatizar/images/team1.jpg" alt="Miembro del equipo" class="img-fluid">
+								<img src="/src/assets/LM.jpg" alt="Miembro del equipo" class="img-fluid" style="width: 100%; height: auto;">
 							</div>
 							<div class="team-content">
-								<h3>Juan Pérez</h3>
-								<p class="position">Director de Ingeniería</p>
+								<h3>Luciano Mulki</h3>
+								<p class="position">Socio Fundador</p>
 								<p class="description">Especialista en automatización industrial con más de 15 años de experiencia.</p>
 							</div>
 						</div>
@@ -104,11 +130,11 @@ import Layout from '../layouts/Layout.astro';
 					<div class="col-md-4">
 						<div class="team-card">
 							<div class="team-image">
-								<img src="/automatizar/images/team2.jpg" alt="Miembro del equipo" class="img-fluid">
+								<img src="/src/assets/ER.jpg" alt="Miembro del equipo" class="img-fluid" style="width: 100%; height: auto;">
 							</div>
 							<div class="team-content">
-								<h3>María González</h3>
-								<p class="position">Jefa de Proyectos</p>
+								<h3>Emanuel Rivero</h3>
+								<p class="position">Socio Fundador</p>
 								<p class="description">Experta en gestión de proyectos industriales y optimización de procesos.</p>
 							</div>
 						</div>
@@ -116,36 +142,13 @@ import Layout from '../layouts/Layout.astro';
 					<div class="col-md-4">
 						<div class="team-card">
 							<div class="team-image">
-								<img src="/automatizar/images/team3.jpg" alt="Miembro del equipo" class="img-fluid">
+								<img src="/src/assets/NC.jpg" alt="Miembro del equipo" class="img-fluid" style="width: 100%; height: auto;">
 							</div>
 							<div class="team-content">
-								<h3>Carlos Rodríguez</h3>
-								<p class="position">Líder Técnico</p>
+								<h3>Nicolas Coria</h3>
+								<p class="position">Socio Fundador</p>
 								<p class="description">Especialista en desarrollo de sistemas SCADA y programación de PLC.</p>
 							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Certificaciones -->
-		<section class="py-5 bg-light">
-			<div class="container">
-				<h2 class="text-center mb-5" style="color: var(--primary-color);">Certificaciones</h2>
-				<div class="row justify-content-center g-4">
-					<div class="col-md-4">
-						<div class="certification-card">
-							<img src="/automatizar/images/cert1.png" alt="Certificación ISO" class="img-fluid mb-3">
-							<h4>ISO 9001:2015</h4>
-							<p>Gestión de Calidad</p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="certification-card">
-							<img src="/automatizar/images/cert2.png" alt="Certificación Industrial" class="img-fluid mb-3">
-							<h4>Certificación Industrial</h4>
-							<p>Procesos Automatizados</p>
 						</div>
 					</div>
 				</div>
