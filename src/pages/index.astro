@@ -1,8 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets';
-import Logo from '../assets/logo.png';
-import Portada from '../Imagenes/portada.jpg';
+import { Portada } from 'astro:assets';
+import Portada from '../assets/portada.jpg';
 ---
 
 <Layout title="Automatizar - Soluciones Tecnológicas para la Industria">
@@ -11,9 +10,7 @@ import Portada from '../Imagenes/portada.jpg';
 		<section class="hero position-relative">
 			<div class="hero-overlay"></div>
 			<div class="hero-bg">
-				<div class="carousel-item active">
-					<img src="/Imagenes/portada.jpg" class="d-block w-100 img" alt="Portada">
-				</div>
+				<img src={Portada.src} class="d-block w-100 img" alt="Portada">
 			</div>
 			<div class="hero-content">
 				<div class="container">
@@ -211,9 +208,14 @@ import Portada from '../Imagenes/portada.jpg';
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: 100%;
+		height: 100vh;
+		overflow: hidden;
+	}
+
+	.hero-bg img {
 		object-fit: cover;
-		z-index: 1;
+		width: 100%;
+		height: 100%;
 	}
 
 	.hero-overlay {
