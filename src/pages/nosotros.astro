@@ -1,5 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import Automation from '../assets/automation.jpeg';
+import LM from '../assets/LM.jpg';
+import ER from '../assets/ER.jpg';
+import NC from '../assets/NC.jpg';
 ---
 
 <Layout title="Nosotros - Automatizar">
@@ -22,7 +27,7 @@ import Layout from '../layouts/Layout.astro';
 				<div class="row align-items-center g-5 text-center">
 					<div class="col-lg-6">
 						<div class="about-image">
-							<img src="./src/assets/automation.jpeg" alt="Equipo Automatizar" class="img-fluid rounded shadow" style="height: 100%; width: 100%; object-fit: cover; max-height: 400px;">
+							<img src={Automation.src} alt="Equipo Automatizar" class="img-fluid rounded shadow" style="height: 100%; width: 100%; object-fit: cover; max-height: 400px;">
 						</div>
 					</div>
 					<div class="col-lg-6">
@@ -118,7 +123,7 @@ import Layout from '../layouts/Layout.astro';
 					<div class="col-md-4">
 						<div class="team-card">
 							<div class="team-image">
-								<img src="/src/assets/LM.jpg" alt="Miembro del equipo" class="img-fluid" style="width: 100%; height: auto;">
+								<img src={LM.src} alt="Miembro del equipo" class="img-fluid" style="width: 100%; height: auto;">
 							</div>
 							<div class="team-content">
 								<h3>Luciano Mulki</h3>
@@ -130,7 +135,7 @@ import Layout from '../layouts/Layout.astro';
 					<div class="col-md-4">
 						<div class="team-card">
 							<div class="team-image">
-								<img src="/src/assets/ER.jpg" alt="Miembro del equipo" class="img-fluid" style="width: 100%; height: auto;">
+								<img src={ER.src} alt="Miembro del equipo" class="img-fluid" style="width: 100%; height: auto;">
 							</div>
 							<div class="team-content">
 								<h3>Emanuel Rivero</h3>
@@ -142,7 +147,7 @@ import Layout from '../layouts/Layout.astro';
 					<div class="col-md-4">
 						<div class="team-card">
 							<div class="team-image">
-								<img src="/src/assets/NC.jpg" alt="Miembro del equipo" class="img-fluid" style="width: 100%; height: auto;">
+								<img src={NC.src} alt="Miembro del equipo" class="img-fluid" style="width: 100%; height: auto;">
 							</div>
 							<div class="team-content">
 								<h3>Nicolas Coria</h3>
