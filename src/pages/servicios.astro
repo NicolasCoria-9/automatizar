@@ -1,11 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Productos } from 'astro:assets';
+import { Image } from 'astro:assets';
 import Productos from '../assets/productos.jpg';
 import Integracionsoluciones from '../assets/integracionsoluciones.jpg';
 import Tableroindustrial from '../assets/tableroindustrial.jpg';
 import Industria from '../assets/industria.jpg';
 import Serviciopostventa from '../assets/serviciopostventa.jpg';
+
 
 ---
 
@@ -30,7 +31,7 @@ import Serviciopostventa from '../assets/serviciopostventa.jpg';
 				<div class="row g-4">
 					<div class="col-md-4">
 						<div class="category-card text-center border p-3" style="border: 1px solid #ddd; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-							<img src={Productos.src} alt="Equipos de Automatización" class="img-fluid mb-3" style="height: 200px; object-fit: cover;" />
+							<img src={Productos.src} class="d-block w-100 img" alt="Comercialización de Equipos de Automatización">
 							<h3 style="color: var(--primary-color);">Comercialización de Equipos de Automatización</h3>
 							<p style="color: rgb(0, 0, 0);">Proporcionamos los mejores equipos del mercado, incluyendo PLCs y HMIs de última generación, para optimizar tus procesos industriales.</p>
 						</div>
