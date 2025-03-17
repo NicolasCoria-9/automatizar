@@ -204,13 +204,17 @@ import Portada from '../assets/portada.jpg';
 	}
 
 	.hero-bg {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100vh;
-		overflow: hidden;
-	}
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('ruta-de-tu-imagen.jpg'); /* Cambia por la URL de tu imagen */
+    background-repeat: repeat; /* Hace el efecto de mosaico */
+    background-size: auto; /* Mantiene el tamaño original de la imagen */
+    background-position: top left;
+    z-index: -1;
+}
 
 	.hero-bg img {
 		object-fit: cover;
