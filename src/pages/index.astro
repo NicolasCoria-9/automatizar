@@ -2,6 +2,17 @@
 import Layout from '../layouts/Layout.astro';
 import { Portada } from 'astro:assets';
 import Portada from '../assets/portada.jpg';
+import Fatek from '../assets/fateklogo.png';
+import Festo from '../assets/festologo.png';
+import IFM from '../assets/ifmlogo.png';
+import Rexroth from '../assets/rexrothlogo.png';
+import Schneider from '../assets/schneiderlogo.png';
+import Sew from '../assets/sewlogo.png';
+import Siemens from '../assets/siemenslogo.png';
+import WEG from '../assets/weglogo.png';
+import Weintek from '../assets/weinteklogo.png';
+import CCG from '../assets/ccglogo.png';
+import Omron from '../assets/omronlogo.png';
 ---
 
 <Layout title="Automatizar - Soluciones Tecnológicas para la Industria">
@@ -105,7 +116,7 @@ import Portada from '../assets/portada.jpg';
 		<section class="features py-5 bg-light">
 			<div class="container">
 				<h2 class="text-center mb-5" style="color: rgb(17, 60, 105);">Nuestros Valores</h2>
-				<div class="row g-4">
+				<div class="row g-4 justify-content-center">
 					<div class="col-md-4">
 						<div class="feature-box text-center">
 							<div class="feature-icon">
@@ -159,19 +170,62 @@ import Portada from '../assets/portada.jpg';
 		<section class="features py-5 bg-light">
 			<div class="container">
 				<h2 class="text-center mb-5" style="color: rgb(17, 60, 105);">Marcas con las que trabajamos</h2>
-				<div class="row g-4">
-					<div class="col-md-3">
-						<img src="/path/to/brand1.png" alt="Marca 1" class="img-fluid" />
+				<div id="brandCarousel" class="carousel slide" data-bs-ride="carousel">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<div class="row g-2 justify-content-center">
+								<div class="col-md-3">
+									<img src={Fatek.src} alt="Fatek" class="img-fluid" style="max-height: 100px; object-fit: scale-down;" />
+								</div>
+								<div class="col-md-3">
+									<img src={Schneider.src} alt="Schneider" class="img-fluid" style="max-height: 100px; object-fit: scale-down;" />
+								</div>
+								<div class="col-md-3">
+									<img src={Siemens.src} alt="Siemens" class="img-fluid" style="max-height: 100px; object-fit: scale-down;" />
+								</div>
+								<div class="col-md-3">
+									<img src={Festo.src} alt="Festo" class="img-fluid" style="max-height: 100px; object-fit: scale-down;" />
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="row g-2 justify-content-center">
+								<div class="col-md-3">
+									<img src={Weintek.src} alt="Weintek" class="img-fluid" style="max-height: 100px; object-fit: scale-down;" />
+								</div>
+								<div class="col-md-3">
+									<img src={CCG.src} alt="CCG" class="img-fluid" style="max-height: 100px; object-fit: scale-down;" />
+								</div>
+								<div class="col-md-3">
+									<img src={Sew.src} alt="Sew" class="img-fluid" style="max-height: 100px; object-fit: scale-down;" />
+								</div>
+								<div class="col-md-3">
+									<img src={Omron.src} alt="Omron" class="img-fluid" style="max-height: 100px; object-fit: scale-down;" />
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="row g-2 justify-content-center">
+								<div class="col-md-3">
+									<img src={IFM.src} alt="IFM" class="img-fluid" style="max-height: 100px; object-fit: scale-down;" />
+								</div>
+								<div class="col-md-3">
+									<img src={Rexroth.src} alt="Rexroth" class="img-fluid" style="max-height: 100px; object-fit: scale-down;" />
+								</div>
+								<div class="col-md-3">
+									<img src={WEG.src} alt="WEG" class="img-fluid" style="max-height: 100px; object-fit: scale-down;" />
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="col-md-3">
-						<img src="/path/to/brand2.png" alt="Marca 2" class="img-fluid" />
-					</div>
-					<div class="col-md-3">
-						<img src="/path/to/brand3.png" alt="Marca 3" class="img-fluid" />
-					</div>
-					<div class="col-md-3">
-						<img src="/path/to/brand4.png" alt="Marca 4" class="img-fluid" />
-					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#brandCarousel" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#brandCarousel" data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
 				</div>
 			</div>
 		</section>
