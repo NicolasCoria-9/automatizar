@@ -6,7 +6,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "deploy": "astro build && gh-pages -d dist -r https://newdomain.com",
+    "deploy": "astro build && gh-pages -d dist -r https://automatizarsa.com.ar/",
     "astro": "astro"
   },
   "dependencies": {
