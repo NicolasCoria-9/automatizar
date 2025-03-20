@@ -1,10 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
-import Automation from '../assets/automation.jpeg';
-import LM from '../assets/LM.jpg';
-import NC from '../assets/NC.jpg';
-import ER from '../assets/ER.jpg';
+
 ---
 
 <Layout title="Nosotros - Automatizar">
@@ -27,7 +24,7 @@ import ER from '../assets/ER.jpg';
 				<div class="row align-items-center g-5 text-center">
 					<div class="col-lg-6">
 						<div class="about-image">
-							<img src={Automation.src} class="d-block w-100 img" alt="Portada">
+							<img src="src/assets/automation.jpeg" class="d-block w-100 img" alt="Portada">
 						</div>
 					</div>
 					<div class="col-lg-6">
@@ -123,7 +120,7 @@ import ER from '../assets/ER.jpg';
 					<div class="col-md-4">
 						<div class="team-card">
 							<div class="team-image">
-								<img src={LM.src} alt="Miembro del equipo" class="img-fluid" style="width: 100%; height: auto;">
+								<img src="src/assets/LM.jpg" alt="Miembro del equipo" class="img-fluid" style="width: 100%; height: auto;">
 							</div>
 							<div class="team-content">
 								<h3>Luciano Mulki</h3>
@@ -135,7 +132,7 @@ import ER from '../assets/ER.jpg';
 					<div class="col-md-4">
 						<div class="team-card">
 							<div class="team-image">
-								<img src={ER.src} alt="Miembro del equipo" class="img-fluid" style="width: 100%; height: auto;">
+								<img src="src/assets/ER.jpg" alt="Miembro del equipo" class="img-fluid" style="width: 100%; height: auto;">
 							</div>
 							<div class="team-content">
 								<h3>Emanuel Rivero</h3>
@@ -147,7 +144,7 @@ import ER from '../assets/ER.jpg';
 					<div class="col-md-4">
 						<div class="team-card">
 							<div class="team-image">
-								<img src={NC.src} alt="Miembro del equipo" class="img-fluid" style="width: 100%; height: auto;">
+								<img src="src/assets/NC.jpg" alt="Miembro del equipo" class="img-fluid" style="width: 100%; height: auto;">
 							</div>
 							<div class="team-content">
 								<h3>Nicolas Coria</h3>
