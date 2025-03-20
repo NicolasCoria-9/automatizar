@@ -1,10 +1,10 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets';
-import Automation from '../assets/automation.jpeg';
-import LM from '../assets/lm.jpg';
-import ER from '../assets/er.jpg';
-import NC from '../assets/nc.jpg';
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import Automation from "../assets/automation.jpeg";
+import LM from "../assets/lm.jpg";
+import ER from "../assets/er.jpg";
+import NC from "../assets/nc.jpg";
 ---
 
 <Layout title="Nosotros - Automatizar">
@@ -14,8 +14,13 @@ import NC from '../assets/nc.jpg';
 			<div class="hero-image">
 				<div class="hero-content">
 					<div class="container">
-						<h1 class="text-white text-center mb-4">Sobre Nosotros</h1>
-						<p class="text-white text-center lead">Expertos en automatización y soluciones tecnológicas para la industria</p>
+						<h1 class="text-white text-center mb-4">
+							Sobre Nosotros
+						</h1>
+						<p class="text-white text-center lead">
+							Expertos en automatización y soluciones tecnológicas
+							para la Industria
+						</p>
 					</div>
 				</div>
 			</div>
@@ -27,32 +32,83 @@ import NC from '../assets/nc.jpg';
 				<div class="row align-items-center g-5 text-center">
 					<div class="col-lg-6">
 						<div class="about-image">
-							<Image src={Automation} alt="Automation" class="d-block w-100 img" />
+							<Image
+								src={Automation}
+								alt="Automation"
+								class="d-block w-100 img"
+							/>
 						</div>
 					</div>
 					<div class="col-lg-6">
 						<div class="about-content">
-							<h1 class="text-center mb-5" style="color: var(--primary-color);">¿Quiénes Somos?</h1>
-							<p class="text-start">En AutomatizAR, somos un equipo apasionado y comprometido con la innovación en el campo de la automatización industrial. Nos especializamos en la comercialización e integración de soluciones que optimizan los procesos productivos de nuestros clientes. Con un enfoque "llave en mano", aseguramos que cada proyecto sea gestionado con la máxima atención al detalle, desde la provisión de equipos hasta la instalación, puesta en marcha y servicio de posventa.</p>
-							<p class="text-start">Nuestra experiencia en el sector nos permite ofrecer un servicio completo y personalizado, adaptándonos a las necesidades específicas de cada cliente. Nos enorgullece acompañar a las pequeñas y medianas empresas en Rafaela y la región, ayudándolas a acceder a tecnología de vanguardia que mejora su eficiencia y competitividad.</p>
-							<p class="text-start">En AutomatizAR, creemos que la clave del éxito radica en construir relaciones sólidas y de confianza con nuestros clientes, basadas en la transparencia y el compromiso. Estamos aquí para transformar la industria, un proyecto a la vez.</p>
-							
+							<h1
+								class="text-center mb-5"
+								style="color: var(--primary-color);"
+							>
+								¿Quiénes Somos?
+							</h1>
+							<p class="text-start">
+								En AutomatizAR, somos un equipo apasionado y
+								comprometido con la innovación en el campo de la
+								automatización industrial. Nos especializamos en
+								la comercialización e integración de soluciones
+								que optimizan los procesos productivos de
+								nuestros clientes. Con un enfoque "llave en
+								mano", aseguramos que cada proyecto sea
+								gestionado con la máxima atención al detalle,
+								desde la provisión de equipos hasta la
+								instalación, puesta en marcha y servicio de
+								posventa.
+							</p>
+							<p class="text-start">
+								Nuestra experiencia en el sector nos permite
+								ofrecer un servicio completo y personalizado,
+								adaptándonos a las necesidades específicas de
+								cada cliente. Nos enorgullece acompañar a las
+								pequeñas y medianas empresas en Rafaela y la
+								región, ayudándolas a acceder a tecnología de
+								vanguardia que mejora su eficiencia y
+								competitividad.
+							</p>
+							<p class="text-start">
+								En AutomatizAR, creemos que la clave del éxito
+								radica en construir relaciones sólidas y de
+								confianza con nuestros clientes, basadas en la
+								transparencia y el compromiso. Estamos aquí para
+								transformar la industria, un proyecto a la vez.
+							</p>
 						</div>
-					</div>	
+					</div>
 				</div>
 				<div class="row g-4 text-center">
 					<div class="col-md-6">
 						<div class="mission-item border p-3 rounded shadow">
 							<i class="fas fa-bullseye"></i>
 							<h4>Misión</h4>
-							<p class="text-start">Facilitar el acceso a soluciones de automatización industrial innovadoras, brindando un servicio integral y personalizado que optimice los procesos productivos de las pequeñas y medianas empresas en Rafaela y la región. Nos comprometemos a ofrecer tecnología de vanguardia con un enfoque "llave en mano", asegurando calidad, eficiencia y acompañamiento en cada etapa del proceso.</p>
+							<p class="text-start">
+								Facilitar el acceso a soluciones de
+								automatización industrial innovadoras, brindando
+								un servicio integral y personalizado que
+								optimice los procesos productivos de las
+								pequeñas y medianas empresas en Rafaela y la
+								región. Nos comprometemos a ofrecer tecnología
+								de vanguardia con un enfoque "llave en mano",
+								asegurando calidad, eficiencia y acompañamiento
+								en cada etapa del proceso.
+							</p>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="mission-item border p-3 rounded shadow">
 							<i class="fas fa-eye"></i>
 							<h4>Visión</h4>
-							<p class="text-start">Ser la empresa líder en automatización industrial en la región, reconocida por su excelencia en integración tecnológica, confiabilidad en el servicio y compromiso con la modernización de la industria nacional.</p>
+							<p class="text-start">
+								Ser la empresa líder en automatización
+								industrial en la región, reconocida por su
+								excelencia en integración tecnológica,
+								confiabilidad en el servicio y compromiso con la
+								modernización de la industria nacional.
+							</p>
 						</div>
 					</div>
 				</div>
@@ -62,7 +118,12 @@ import NC from '../assets/nc.jpg';
 		<!-- Valores -->
 		<section class="py-5 bg-light">
 			<div class="container">
-				<h2 class="text-center mb-5" style="color: var(--primary-color);">Nuestros Valores</h2>
+				<h2
+					class="text-center mb-5"
+					style="color: var(--primary-color);"
+				>
+					Nuestros Valores
+				</h2>
 				<div class="row g-4 text-center">
 					<div class="col-md-4">
 						<div class="value-card border p-3 rounded shadow">
@@ -70,7 +131,11 @@ import NC from '../assets/nc.jpg';
 								<i class="fas fa-chart-line"></i>
 							</div>
 							<h3>Eficiencia</h3>
-							<p>Buscamos la optimización de los procesos industriales para maximizar la productividad y rentabilidad de nuestros clientes.</p>
+							<p>
+								Buscamos la optimización de los procesos
+								industriales para maximizar la productividad y
+								rentabilidad de nuestros clientes.
+							</p>
 						</div>
 					</div>
 					<div class="col-md-4">
@@ -79,7 +144,11 @@ import NC from '../assets/nc.jpg';
 								<i class="fas fa-handshake"></i>
 							</div>
 							<h3>Compromiso</h3>
-							<p>Acompañamos a nuestros clientes en cada etapa del proceso con un servicio integral y personalizado.</p>
+							<p>
+								Acompañamos a nuestros clientes en cada etapa
+								del proceso con un servicio integral y
+								personalizado.
+							</p>
 						</div>
 					</div>
 					<div class="col-md-4">
@@ -88,7 +157,10 @@ import NC from '../assets/nc.jpg';
 								<i class="fas fa-lightbulb"></i>
 							</div>
 							<h3>Innovación</h3>
-							<p>Apostamos por la tecnología como motor de transformación y mejora continua.</p>
+							<p>
+								Apostamos por la tecnología como motor de
+								transformación y mejora continua.
+							</p>
 						</div>
 					</div>
 				</div>
@@ -99,7 +171,11 @@ import NC from '../assets/nc.jpg';
 								<i class="fas fa-people-carry"></i>
 							</div>
 							<h3>Confianza</h3>
-							<p>Construimos relaciones sólidas basadas en la transparencia, el cumplimiento y el soporte técnico continuo.</p>
+							<p>
+								Construimos relaciones sólidas basadas en la
+								transparencia, el cumplimiento y el soporte
+								técnico continuo.
+							</p>
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -108,7 +184,11 @@ import NC from '../assets/nc.jpg';
 								<i class="fas fa-check"></i>
 							</div>
 							<h3>Calidad</h3>
-							<p>Trabajamos con las mejores marcas y soluciones para garantizar resultados eficientes y duraderos.</p>
+							<p>
+								Trabajamos con las mejores marcas y soluciones
+								para garantizar resultados eficientes y
+								duraderos.
+							</p>
 						</div>
 					</div>
 				</div>
@@ -118,41 +198,71 @@ import NC from '../assets/nc.jpg';
 		<!-- Equipo -->
 		<section class="py-5">
 			<div class="container">
-				<h2 class="text-center mb-5" style="color: var(--primary-color);">Nuestro Equipo</h2>
+				<h2
+					class="text-center mb-5"
+					style="color: var(--primary-color);"
+				>
+					Nuestro Equipo
+				</h2>
 				<div class="row g-4">
 					<div class="col-md-4">
 						<div class="team-card">
 							<div class="team-image">
-								<Image src={LM} alt="Miembro del equipo" class="img-fluid" style="width: 100%; height: auto;" />
+								<Image
+									src={LM}
+									alt="Miembro del equipo"
+									class="img-fluid"
+									style="width: 100%; height: auto;"
+								/>
 							</div>
 							<div class="team-content">
 								<h3>Luciano Mulki</h3>
 								<p class="position">Socio Fundador</p>
-								<p class="description">Relevamiento, cotizacion y administracion general. Mas de 15 años en el sector industrial.</p>
+								<p class="description">
+									Relevamiento, cotizacion y administracion
+									general. Mas de 15 años en el sector
+									industrial.
+								</p>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="team-card">
 							<div class="team-image">
-								<Image src={ER} alt="Miembro del equipo" class="img-fluid" style="width: 100%; height: auto;" />
+								<Image
+									src={ER}
+									alt="Miembro del equipo"
+									class="img-fluid"
+									style="width: 100%; height: auto;"
+								/>
 							</div>
 							<div class="team-content">
 								<h3>Emanuel Rivero</h3>
 								<p class="position">Socio Fundador</p>
-								<p class="description">Programador senior, documentacion tecnica, puesta en marcha y soporte. </p>
+								<p class="description">
+									Programador senior, documentacion tecnica,
+									puesta en marcha y soporte.
+								</p>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="team-card">
 							<div class="team-image">
-								<Image src={NC} alt="Miembro del equipo" class="img-fluid" style="width: 100%; height: auto;" />
+								<Image
+									src={NC}
+									alt="Miembro del equipo"
+									class="img-fluid"
+									style="width: 100%; height: auto;"
+								/>
 							</div>
 							<div class="team-content">
 								<h3>Nicolas Coria</h3>
 								<p class="position">Socio Fundador</p>
-								<p class="description">Programador senior, relevamiento, puesta en marcha y finalizacion.</p>
+								<p class="description">
+									Programador senior, relevamiento, puesta en
+									marcha y finalizacion.
+								</p>
 							</div>
 						</div>
 					</div>
@@ -165,8 +275,14 @@ import NC from '../assets/nc.jpg';
 			<div class="container">
 				<div class="cta-box text-center">
 					<h2 class="mb-4">Trabajemos Juntos</h2>
-					<p class="lead mb-4">Descubra cómo podemos ayudar a optimizar sus procesos industriales</p>
-					<a href="https://www.automatizarsa.com.ar/contacto/" class="btn btn-primary btn-lg">Contáctenos</a>
+					<p class="lead mb-4">
+						Descubra cómo podemos ayudar a optimizar sus procesos
+						industriales
+					</p>
+					<a
+						href="https://www.automatizarsa.com.ar/contacto/"
+						class="btn btn-primary btn-lg">Contáctenos</a
+					>
 				</div>
 			</div>
 		</section>
@@ -185,7 +301,7 @@ import NC from '../assets/nc.jpg';
 	}
 
 	.hero::before {
-		content: '';
+		content: "";
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -201,7 +317,7 @@ import NC from '../assets/nc.jpg';
 
 	.about-image img {
 		border-radius: 10px;
-		box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 	}
 
 	.mission-values {
@@ -213,7 +329,7 @@ import NC from '../assets/nc.jpg';
 		padding: 1.5rem;
 		background: white;
 		border-radius: 10px;
-		box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 	}
 
 	.mission-item i {
@@ -231,7 +347,7 @@ import NC from '../assets/nc.jpg';
 		background: white;
 		padding: 2rem;
 		border-radius: 10px;
-		box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 		text-align: center;
 		height: 100%;
 		transition: transform 0.3s ease;
@@ -257,7 +373,7 @@ import NC from '../assets/nc.jpg';
 		background: white;
 		border-radius: 10px;
 		overflow: hidden;
-		box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 		height: 100%;
 		transition: transform 0.3s ease;
 	}
@@ -298,7 +414,7 @@ import NC from '../assets/nc.jpg';
 		background: white;
 		padding: 2rem;
 		border-radius: 10px;
-		box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 		text-align: center;
 		height: 100%;
 	}
@@ -317,7 +433,7 @@ import NC from '../assets/nc.jpg';
 		background: white;
 		padding: 4rem;
 		border-radius: 10px;
-		box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 	}
 
 	.cta-box h2 {
