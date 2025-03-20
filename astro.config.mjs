@@ -5,5 +5,5 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   output: 'static',
   site: 'https://automatizarsa.com.ar/',
-  base: '/automatizar'
+  base: '/'
 });
