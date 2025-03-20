@@ -242,7 +242,7 @@ import Layout from "../layouts/Layout.astro";
 								}
 							})
 							.catch((error) => {
-								console.log(error);
+								console.log('Error en el envío del formulario:', error);
 								result.innerHTML = "Something went wrong!";
 							})
 							.then(function () {
