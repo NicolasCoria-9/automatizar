@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import Portada from '../assets/portada.jpg';
 ---
 
 <Layout title="Automatizar - Soluciones Tecnológicas para la Industria" url="https://www.automatizarsa.com.ar/">
@@ -8,14 +10,14 @@ import Layout from '../layouts/Layout.astro';
 		<section class="hero position-relative">
 			<div class="hero-overlay"></div>
 			<div class="hero-bg">
-				<img src="/src/assets/portada.jpg" class="d-block w-100 img" alt="Portada">
+				<Image src={Portada} class="d-block w-100 img" alt="Portada">
 			</div>
 			<div class="hero-content">
 				<div class="container">
 					<div class="row align-items-center min-vh-100">
 						<div class="col-lg-6 text-center text-lg-start">
 							<div class="hero-text">
-								<h1 class="display-4 text-white mb-4">Soluciones Tecnológicas para la Industria</h1>
+								<h1 class="display-4 text-white mb-4">Soluciones Tecnológicas para la industria</h1>
 								<p class="lead text-white mb-4">Automatización, control y servicios llave en mano</p>
 								<a href="https://www.automatizarsa.com.ar/contacto/" class="btn btn-primary btn-lg">Contáctenos</a>
 							</div>
