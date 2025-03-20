@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Portada } from 'astro:assets';
-import Portada from '/assets/portada.jpg';
+import Portada from '../assets/portada.jpg';
 import Fatek from '../assets/fateklogo.png';
 import Festo from '../assets/festologo.png';
 import IFM from '../assets/ifmlogo.png';
@@ -22,6 +22,7 @@ import Omron from '../assets/omronlogo.png';
 			<div class="hero-overlay"></div>
 			<div class="hero-bg">
 				<img src={Portada.src} class="d-block w-100 img" alt="Portada">
+				<img src="/assets/portada.png" alt="Fatek">
 			</div>
 			<div class="hero-content">
 				<div class="container">
