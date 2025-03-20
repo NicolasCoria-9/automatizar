@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets';
 ---
 
 <Layout title="Automatizar - Soluciones Tecnológicas para la Industria" url="https://www.automatizarsa.com.ar/">
@@ -9,7 +8,7 @@ import { Image } from 'astro:assets';
 		<section class="hero position-relative">
 			<div class="hero-overlay"></div>
 			<div class="hero-bg">
-				<img src="src/assets/portada.jpg" class="d-block w-100 img" alt="Portada">
+				<img src="/src/assets/portada.jpg" class="d-block w-100 img" alt="Portada">
 			</div>
 			<div class="hero-content">
 				<div class="container">
@@ -252,7 +251,7 @@ import { Image } from 'astro:assets';
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../assets/portada.jpg'); /* Cambia por la URL de tu imagen */
+    background-image: url(/src/assets/portada.jpg); /* Cambia por la URL de tu imagen */
     background-repeat: repeat; /* Hace el efecto de mosaico */
     background-size: auto; /* Mantiene el tamaño original de la imagen */
     background-position: top left;
@@ -387,8 +386,8 @@ import { Image } from 'astro:assets';
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: url('../assets/portada.jpg') center/cover;
-		opacity: 0.1;
+		background: url(/src/assets/portada.jpg) center/cover;
+				opacity: 0.1;
 	}
 
 	@media (max-width: 991px) {
