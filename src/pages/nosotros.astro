@@ -3,8 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import Automation from "../assets/automation.jpeg";
 /* import LM from "../assets/lm.jpg"; 
-import ER from "../assets/er.jpg";
-import NC from "../assets/nc.jpg";*/
+import ER from "../assets/er.jpg";*/
+import Nico from "../assets/nicocoria.jpg";
 ---
 
 <Layout title="Nosotros - Automatizar">
@@ -249,12 +249,12 @@ import NC from "../assets/nc.jpg";*/
 					<div class="col-md-4">
 						<div class="team-card">
 							<div class="team-image">
-								<!-- <Image
-									src={NC}
+								<Image
+									src={Nico}
 									alt="Miembro del equipo"
 									class="img-fluid"
 									style="width: 100%; height: auto;"
-								/> -->
+								/>
 							</div>
 							<div class="team-content">
 								<h3>Nicolas Coria</h3>
@@ -279,9 +279,8 @@ import NC from "../assets/nc.jpg";*/
 						Descubra cómo podemos ayudar a optimizar sus procesos
 						industriales
 					</p>
-					<a
-						href="https://www.automatizarsa.com.ar/contacto/"
-						class="btn btn-primary btn-lg">Contáctenos</a
+					<a href="/contacto" class="btn btn-primary btn-lg"
+						>Contáctenos</a
 					>
 				</div>
 			</div>
