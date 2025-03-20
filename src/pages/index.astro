@@ -1,429 +1,575 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets';
-import Portada from '../assets/portada.jpg';
-import FestoLogo from '../assets/festologo.png';
-import FatekLogo from '../assets/fateklogo.png';
-import SiemensLogo from '../assets/siemenslogo.png';
-import OmronLogo from '../assets/omronlogo.png';
-import WeintekLogo from '../assets/weinteklogo.png';
-import CCGLogo from '../assets/ccglogo.png';
-import SewLogo from '../assets/sewlogo.png';
-import IFMLogo from '../assets/ifmlogo.png';
-import RexrothLogo from '../assets/rexrothlogo.png';
-import WEGLogo from '../assets/weglogo.png';
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import Portada from "../assets/portada.jpg";
+import SchneiderLogo from "../assets/schneiderlogo.png";
+import FestoLogo from "../assets/festologo.png";
+import FatekLogo from "../assets/fateklogo.png";
+import SiemensLogo from "../assets/siemenslogo.png";
+import OmronLogo from "../assets/omronlogo.png";
+import WeintekLogo from "../assets/weinteklogo.png";
+import CCGLogo from "../assets/ccglogo.png";
+import SewLogo from "../assets/sewlogo.png";
+import IFMLogo from "../assets/ifmlogo.png";
+import RexrothLogo from "../assets/rexrothlogo.png";
+import WEGLogo from "../assets/weglogo.png";
 ---
 
-<Layout title="Automatizar - Soluciones Tecnológicas para la Industria" url="https://www.automatizarsa.com.ar/">
+<Layout
+	title="Automatizar - Soluciones Tecnológicas para la Industria"
+	url="https://www.automatizarsa.com.ar/"
+>
 	<main>
 		<!-- Hero Section -->
 		<section class="hero position-relative">
 			<div class="hero-overlay"></div>
 			<div class="hero-bg">
-				<Image src={Portada} class="d-block w-100 img" alt="Portada">
+				<Image src={Portada} class="d-block w-100 img" alt="Portada" />
+				<div class="hero-content">
+					<div class="container">
+						<div class="row align-items-center min-vh-100">
+							<div class="col-lg-6 text-center text-lg-start">
+								<div class="hero-text">
+									<h1 class="display-4 text-white mb-4">
+										Soluciones Tecnológicas para la
+										industria
+									</h1>
+									<p class="lead text-white mb-4">
+										Automatización, control y servicios
+										llave en mano
+									</p>
+									<a
+										href="/contacto"
+										class="btn btn-primary btn-lg"
+										>Contáctenos</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="hero-content">
+
+			<!-- Categorías Section -->
+			<section class="categories py-5">
 				<div class="container">
-					<div class="row align-items-center min-vh-100">
-						<div class="col-lg-6 text-center text-lg-start">
-							<div class="hero-text">
-								<h1 class="display-4 text-white mb-4">Soluciones Tecnológicas para la industria</h1>
-								<p class="lead text-white mb-4">Automatización, control y servicios llave en mano</p>
-								<a href="https://www.automatizarsa.com.ar/contacto/" class="btn btn-primary btn-lg">Contáctenos</a>
+					<h2
+						class="text-center mb-5"
+						style="color: rgb(17, 60, 105);"
+					>
+						Nuestras Soluciones
+					</h2>
+					<div class="row g-4">
+						<div class="col-md-3">
+							<div class="category-card">
+								<div class="category-icon">
+									<i class="fas fa-cogs"></i>
+								</div>
+								<h3>
+									Comercialización de Equipos de
+									Automatización
+								</h3>
+								<ul class="category-list">
+									<li>PLCs y HMIs de última generación</li>
+									<li>
+										Controladores avanzados para procesos
+										industriales
+									</li>
+									<li>Instrumentación precisa y confiable</li>
+								</ul>
+								<a href="/servicios" class="category-link">
+									Ver más <i class="fas fa-arrow-right"></i>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="category-card">
+								<div class="category-icon">
+									<i class="fas fa-plug"></i>
+								</div>
+								<h3>Integración de Soluciones</h3>
+								<ul class="category-list">
+									<li>
+										Diseño y programación de sistemas a
+										medida
+									</li>
+									<li>
+										Instalación y configuración de equipos
+									</li>
+									<li>
+										Capacitación y soporte técnico continuo
+									</li>
+								</ul>
+								<a href="/servicios" class="category-link">
+									Ver más <i class="fas fa-arrow-right"></i>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="category-card">
+								<div class="category-icon">
+									<i class="fas fa-refresh"></i>
+								</div>
+								<h3>Actualización de Electrónica de Control</h3>
+								<ul class="category-list">
+									<li>Análisis de sistemas existentes</li>
+									<li>
+										Renovación y modernización de tecnología
+									</li>
+									<li>
+										Optimización de procesos y eficiencia
+									</li>
+								</ul>
+								<a href="/servicios" class="category-link">
+									Ver más <i class="fas fa-arrow-right"></i>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="category-card">
+								<div class="category-icon">
+									<i class="fas fa-wrench"></i>
+								</div>
+								<h3>Servicio Postventa</h3>
+								<ul class="category-list">
+									<li>Asistencia técnica</li>
+									<li>Remota y Presencial</li>
+									<li>Mantenimiento continuo</li>
+									<li>
+										Capacitación y soporte técnico continuo
+									</li>
+								</ul>
+								<a href="/servicios" class="category-link">
+									Ver más <i class="fas fa-arrow-right"></i>
+								</a>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<!-- Categorías Section -->
-		<section class="categories py-5">
-			<div class="container">
-				<h2 class="text-center mb-5" style="color: rgb(17, 60, 105);">Nuestras Soluciones</h2>
-				<div class="row g-4">
-					<div class="col-md-3">
-						<div class="category-card">
-							<div class="category-icon">
-								<i class="fas fa-cogs"></i>
+			<!-- Features Section -->
+			<section class="features py-5 bg-light">
+				<div class="container">
+					<h2
+						class="text-center mb-5"
+						style="color: rgb(17, 60, 105);"
+					>
+						Nuestros Valores
+					</h2>
+					<div class="row g-4 justify-content-center">
+						<div class="col-md-4">
+							<div class="feature-box text-center">
+								<div class="feature-icon">
+									<i class="fas fa-lightbulb"></i>
+								</div>
+								<h3>Innovación</h3>
+								<p>
+									Impulsamos la transformación tecnológica
+									para mejorar continuamente nuestros procesos
+									y servicios.
+								</p>
 							</div>
-							<h3>Comercialización de Equipos de Automatización</h3>
-							<ul class="category-list">
-								<li>PLCs y HMIs de última generación</li>
-								<li>Controladores avanzados para procesos industriales</li>
-								<li>Instrumentación precisa y confiable</li>
-							</ul>
-							<a href="/servicios" class="category-link">
-								Ver más <i class="fas fa-arrow-right"></i>
-							</a>
 						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="category-card">
-							<div class="category-icon">
-								<i class="fas fa-plug"></i>
+						<div class="col-md-4">
+							<div class="feature-box text-center">
+								<div class="feature-icon">
+									<i class="fas fa-certificate"></i>
+								</div>
+								<h3>Calidad</h3>
+								<p>
+									Comprometidos con los más altos estándares
+									de calidad en cada proyecto que emprendemos.
+								</p>
 							</div>
-							<h3>Integración de Soluciones</h3>
-							<ul class="category-list">
-								<li>Diseño y programación de sistemas a medida</li>
-								<li>Instalación y configuración de equipos</li>
-								<li>Capacitación y soporte técnico continuo</li>
-							</ul>
-							<a href="/servicios" class="category-link">
-								Ver más <i class="fas fa-arrow-right"></i>
-							</a>
 						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="category-card">
-							<div class="category-icon">
-								<i class="fas fa-refresh"></i>
+						<div class="col-md-4">
+							<div class="feature-box text-center">
+								<div class="feature-icon">
+									<i class="fas fa-handshake"></i>
+								</div>
+								<h3>Compromiso</h3>
+								<p>
+									Acompañamos a nuestros clientes en cada
+									etapa, garantizando un servicio integral y
+									personalizado.
+								</p>
 							</div>
-							<h3>Actualización de Electrónica de Control</h3>
-							<ul class="category-list">
-								<li>Análisis de sistemas existentes</li>
-								<li>Renovación y modernización de tecnología</li>
-								<li>Optimización de procesos y eficiencia</li>
-							</ul>
-							<a href="/servicios" class="category-link">
-								Ver más <i class="fas fa-arrow-right"></i>
-							</a>
 						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="category-card">
-							<div class="category-icon">
-								<i class="fas fa-wrench"></i>
+						<div class="col-md-4">
+							<div class="feature-box text-center">
+								<div class="feature-icon">
+									<i class="fas fa-users"></i>
+								</div>
+								<h3>Confianza</h3>
+								<p>
+									Construimos relaciones sólidas basadas en la
+									transparencia y el cumplimiento de nuestras
+									promesas.
+								</p>
 							</div>
-							<h3>Servicio Postventa</h3>
-							<ul class="category-list">
-								<li>Asistencia técnica</li>
-								<li>Remota y Presencial</li>
-								<li>Mantenimiento continuo</li>
-								<li>Capacitación y soporte técnico continuo</li>
-							</ul>
-							<a href="/servicios" class="category-link">
-								Ver más <i class="fas fa-arrow-right"></i>
-							</a>
+						</div>
+						<div class="col-md-4">
+							<div class="feature-box text-center">
+								<div class="feature-icon">
+									<i class="fas fa-chart-line"></i>
+								</div>
+								<h3>Eficiencia</h3>
+								<p>
+									Buscamos optimizar procesos para maximizar
+									la productividad y rentabilidad de nuestros
+									clientes.
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<!-- Features Section -->
-		<section class="features py-5 bg-light">
-			<div class="container">
-				<h2 class="text-center mb-5" style="color: rgb(17, 60, 105);">Nuestros Valores</h2>
-				<div class="row g-4 justify-content-center">
-					<div class="col-md-4">
-						<div class="feature-box text-center">
-							<div class="feature-icon">
-								<i class="fas fa-lightbulb"></i>
+			<!-- Marcas con las que trabajamos Section -->
+			<section class="features py-5 bg-light">
+				<div class="container">
+					<h2
+						class="text-center mb-5"
+						style="color: rgb(17, 60, 105);"
+					>
+						Marcas con las que trabajamos
+					</h2>
+					<div
+						id="brandCarousel"
+						class="carousel slide"
+						data-bs-ride="carousel"
+					>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<div class="row g-2 justify-content-center">
+									<div class="col-md-3">
+										<Image
+											src={FestoLogo}
+											alt="Festo"
+											class="img-fluid"
+											style="max-height: 100px; object-fit: contain;"
+										/>
+									</div>
+									<div class="col-md-3">
+										<Image
+											src={FatekLogo}
+											alt="Fatek"
+											class="img-fluid"
+											style="max-height: 100px; object-fit: contain;"
+										/>
+									</div>
+									<div class="col-md-3">
+										<Image
+											src={SiemensLogo}
+											alt="Siemens"
+											class="img-fluid"
+											style="max-height: 100px; object-fit: contain;"
+										/>
+									</div>
+									<div class="col-md-3">
+										<Image
+											src={SchneiderLogo}
+											alt="Schneider"
+											class="img-fluid"
+											style="max-height: 100px; object-fit: contain;"
+										/>
+									</div>
+								</div>
 							</div>
-							<h3>Innovación</h3>
-							<p>Impulsamos la transformación tecnológica para mejorar continuamente nuestros procesos y servicios.</p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="feature-box text-center">
-							<div class="feature-icon">
-								<i class="fas fa-certificate"></i>
+							<div class="carousel-item">
+								<div class="row g-2 justify-content-center">
+									<div class="col-md-3">
+										<Image
+											src={OmronLogo}
+											alt="Omron"
+											class="img-fluid"
+											style="max-height: 100px; object-fit: contain;"
+										/>
+									</div>
+									<div class="col-md-3">
+										<Image
+											src={WeintekLogo}
+											alt="Weintek"
+											class="img-fluid"
+											style="max-height: 100px; object-fit: contain;"
+										/>
+									</div>
+									<div class="col-md-3">
+										<Image
+											src={CCGLogo}
+											alt="CCG"
+											class="img-fluid"
+											style="max-height: 100px; object-fit: contain;"
+										/>
+									</div>
+									<div class="col-md-3">
+										<Image
+											src={SewLogo}
+											alt="Sew"
+											class="img-fluid"
+											style="max-height: 100px; object-fit: contain;"
+										/>
+									</div>
+								</div>
 							</div>
-							<h3>Calidad</h3>
-							<p>Comprometidos con los más altos estándares de calidad en cada proyecto que emprendemos.</p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="feature-box text-center">
-							<div class="feature-icon">
-								<i class="fas fa-handshake"></i>
+							<div class="carousel-item">
+								<div class="row g-2 justify-content-center">
+									<div class="col-md-3">
+										<Image
+											src={IFMLogo}
+											alt="IFM"
+											class="img-fluid"
+											style="max-height: 100px; object-fit: contain;"
+										/>
+									</div>
+									<div class="col-md-3">
+										<Image
+											src={RexrothLogo}
+											alt="Rexroth"
+											class="img-fluid"
+											style="max-height: 100px; object-fit: contain;"
+										/>
+									</div>
+									<div class="col-md-3">
+										<Image
+											src={WEGLogo}
+											alt="WEG"
+											class="img-fluid"
+											style="max-height: 100px; object-fit: contain;"
+										/>
+									</div>
+								</div>
 							</div>
-							<h3>Compromiso</h3>
-							<p>Acompañamos a nuestros clientes en cada etapa, garantizando un servicio integral y personalizado.</p>
 						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="feature-box text-center">
-							<div class="feature-icon">
-								<i class="fas fa-users"></i>
-							</div>
-							<h3>Confianza</h3>
-							<p>Construimos relaciones sólidas basadas en la transparencia y el cumplimiento de nuestras promesas.</p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="feature-box text-center">
-							<div class="feature-icon">
-								<i class="fas fa-chart-line"></i>
-							</div>
-							<h3>Eficiencia</h3>
-							<p>Buscamos optimizar procesos para maximizar la productividad y rentabilidad de nuestros clientes.</p>
-						</div>
+						<button
+							class="carousel-control-prev"
+							type="button"
+							data-bs-target="#brandCarousel"
+							data-bs-slide="prev"
+						>
+							<span
+								class="carousel-control-prev-icon"
+								aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button
+							class="carousel-control-next"
+							type="button"
+							data-bs-target="#brandCarousel"
+							data-bs-slide="next"
+						>
+							<span
+								class="carousel-control-next-icon"
+								aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<!-- Marcas con las que trabajamos Section -->
-		<section class="features py-5 bg-light">
-			<div class="container">
-				<h2 class="text-center mb-5" style="color: rgb(17, 60, 105);">Marcas con las que trabajamos</h2>
-				<div id="brandCarousel" class="carousel slide" data-bs-ride="carousel">
-					<div class="carousel-inner">
-						<div class="carousel-item active">
-							<div class="row g-2 justify-content-center">
-								<div class="col-md-3">
-									<Image src={FestoLogo} alt="Festo" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
-								</div>
-								<div class="col-md-3">
-									<Image src={FatekLogo} alt="Fatek" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
-								</div>
-								<div class="col-md-3">
-									<Image src={SiemensLogo} alt="Siemens" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
-								</div>
-								<div class="col-md-3">
-									<Image src={FestoLogo} alt="Festo" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
-								</div>
-							</div>
-						</div>
-						<div class="carousel-item">
-							<div class="row g-2 justify-content-center">
-								<div class="col-md-3">
-									<Image src={OmronLogo} alt="Omron" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
-								</div>
-								<div class="col-md-3">
-									<Image src={WeintekLogo} alt="Weintek" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
-								</div>
-								<div class="col-md-3">
-									<Image src={CCGLogo} alt="CCG" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
-								</div>
-								<div class="col-md-3">
-									<Image src={SewLogo} alt="Sew" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
-								</div>
-							</div>
-						</div>
-						<div class="carousel-item">
-							<div class="row g-2 justify-content-center">
-								<div class="col-md-3">
-									<Image src={IFMLogo} alt="IFM" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
-								</div>
-								<div class="col-md-3">
-									<Image src={RexrothLogo} alt="Rexroth" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
-								</div>
-								<div class="col-md-3">
-									<Image src={WEGLogo} alt="WEG" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
-								</div>
-							</div>
+			<!-- CTA Section -->
+			<section class="cta py-5">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-lg-8 text-center">
+							<h2 class="text-white mb-4">
+								¿Listo para automatizar su industria?
+							</h2>
+							<p class="lead text-white mb-4">
+								Contáctenos para discutir su próximo proyecto
+							</p>
 						</div>
 					</div>
-					<button class="carousel-control-prev" type="button" data-bs-target="#brandCarousel" data-bs-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Previous</span>
-					</button>
-					<button class="carousel-control-next" type="button" data-bs-target="#brandCarousel" data-bs-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Next</span>
-					</button>
 				</div>
-			</div>
-		</section>
-
-		<!-- CTA Section -->
-		<section class="cta py-5">
-			<div class="container">
-				<div class="row justify-content-center">
-					<div class="col-lg-8 text-center">
-						<h2 class="text-white mb-4">¿Listo para automatizar su industria?</h2>
-						<p class="lead text-white mb-4">Contáctenos para discutir su próximo proyecto</p>
-					</div>
-				</div>
-			</div>
+			</section>
 		</section>
 	</main>
-	
-</Layout>
 
-<style>
-	:root {
-		--primary-color: rgb(17, 60, 105);
-		--secondary-color: rgb(62, 125, 218);
-	}
+	<style>
+		:root {
+			--primary-color: rgb(17, 60, 105);
+			--secondary-color: rgb(62, 125, 218);
+		}
 
-	.hero {
-		margin-top: -180px;
-		min-height: 100vh;
-		position: relative;
-		overflow: hidden;
-	}
-
-	.hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(${Portada}); /* Cambia por la URL de tu imagen */
-    background-repeat: repeat; /* Hace el efecto de mosaico */
-    background-size: auto; /* Mantiene el tamaño original de la imagen */
-    background-position: top left;
-    z-index: -1;
-}
-
-	.hero-bg img {
-		object-fit: cover;
-		width: 100%;
-		height: 100%;
-	}
-
-	.hero-overlay {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: linear-gradient(rgba(17, 60, 105, 0.85), rgba(17, 60, 105, 0.85));
-		z-index: 2;
-	}
-
-	.hero-content {
-		position: relative;
-		z-index: 3;
-		padding-top: 180px;
-	}
-
-	.hero-text {
-		max-width: 600px;
-	}
-
-	.hero-logo img {
-		filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
-	}
-
-	.categories {
-		background-color: #fff;
-	}
-
-	.category-card {
-		background: white;
-		padding: 2rem;
-		border-radius: 10px;
-		box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-		height: 100%;
-		transition: transform 0.3s ease;
-	}
-
-	.category-card:hover {
-		transform: translateY(-5px);
-	}
-
-	.category-icon {
-		width: 80px;
-		height: 80px;
-		margin: 0 auto 1.5rem;
-		background: var(--primary-color);
-		border-radius: 50%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		color: white;
-		font-size: 2rem;
-	}
-
-	.category-card h3 {
-		color: var(--primary-color);
-		text-align: center;
-		margin-bottom: 1.5rem;
-		font-size: 1.5rem;
-	}
-
-	.category-list {
-		list-style: none;
-		padding: 0;
-		margin: 0 0 1.5rem;
-	}
-
-	.category-list li {
-		padding: 0.5rem 0;
-		border-bottom: 1px solid #eee;
-		color: #666;
-	}
-
-	.category-link {
-		display: block;
-		text-align: right;
-		color: var(--secondary-color);
-		text-decoration: none;
-		font-weight: 500;
-		transition: color 0.3s ease;
-	}
-
-	.category-link:hover {
-		color: var(--primary-color);
-	}
-
-	.feature-box {
-		padding: 2rem;
-		background: white;
-		border-radius: 10px;
-		box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-		height: 100%;
-		transition: transform 0.3s ease;
-	}
-
-	.feature-box:hover {
-		transform: translateY(-5px);
-	}
-
-	.feature-icon {
-		font-size: 2.5rem;
-		color: var(--primary-color);
-		margin-bottom: 1.5rem;
-	}
-
-	.feature-box h3 {
-		color: var(--primary-color);
-		margin-bottom: 1rem;
-	}
-
-	.cta {
-		background: var(--primary-color);
-		position: relative;
-	}
-
-	.cta::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		opacity: 0.1;
-	}
-
-	@media (max-width: 991px) {
 		.hero {
-			margin-top: -130px;
+			margin-top: -180px;
+			min-height: 100vh;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.hero-bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: url(${Portada}); /* Cambia por la URL de tu imagen */
+			background-repeat: repeat; /* Hace el efecto de mosaico */
+			background-size: auto; /* Mantiene el tamaño original de la imagen */
+			background-position: top left;
+			z-index: -1;
+		}
+
+		.hero-bg img {
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+
+		.hero-overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(
+				rgba(17, 60, 105, 0.85),
+				rgba(17, 60, 105, 0.85)
+			);
+			z-index: 2;
 		}
 
 		.hero-content {
-			padding-top: 130px;
+			position: relative;
+			z-index: 3;
+			padding-top: 180px;
 		}
 
 		.hero-text {
+			max-width: 600px;
+		}
+
+		.hero-logo img {
+			filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+		}
+
+		.categories {
+			background-color: #fff;
+		}
+
+		.category-card {
+			background: white;
+			padding: 2rem;
+			border-radius: 10px;
+			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+			height: 100%;
+			transition: transform 0.3s ease;
+		}
+
+		.category-card:hover {
+			transform: translateY(-5px);
+		}
+
+		.category-icon {
+			width: 80px;
+			height: 80px;
+			margin: 0 auto 1.5rem;
+			background: var(--primary-color);
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: white;
+			font-size: 2rem;
+		}
+
+		.category-card h3 {
+			color: var(--primary-color);
 			text-align: center;
-			margin: 0 auto;
+			margin-bottom: 1.5rem;
+			font-size: 1.5rem;
 		}
 
-		.hero-logo {
-			max-width: 300px;
-			margin: 0 auto;
+		.category-list {
+			list-style: none;
+			padding: 0;
+			margin: 0 0 1.5rem;
 		}
-	}
 
-	@media (max-width: 576px) {
-		.hero-logo {
-			max-width: 250px;
+		.category-list li {
+			padding: 0.5rem 0;
+			border-bottom: 1px solid #eee;
+			color: #666;
 		}
-	}
-</style>
+
+		.category-link {
+			display: block;
+			text-align: right;
+			color: var(--secondary-color);
+			text-decoration: none;
+			font-weight: 500;
+			transition: color 0.3s ease;
+		}
+
+		.category-link:hover {
+			color: var(--primary-color);
+		}
+
+		.feature-box {
+			padding: 2rem;
+			background: white;
+			border-radius: 10px;
+			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+			height: 100%;
+			transition: transform 0.3s ease;
+		}
+
+		.feature-box:hover {
+			transform: translateY(-5px);
+		}
+
+		.feature-icon {
+			font-size: 2.5rem;
+			color: var(--primary-color);
+			margin-bottom: 1.5rem;
+		}
+
+		.feature-box h3 {
+			color: var(--primary-color);
+			margin-bottom: 1rem;
+		}
+
+		.cta {
+			background: var(--primary-color);
+			position: relative;
+		}
+
+		.cta::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			opacity: 0.1;
+		}
+
+		@media (max-width: 991px) {
+			.hero {
+				margin-top: -130px;
+			}
+
+			.hero-content {
+				padding-top: 130px;
+			}
+
+			.hero-text {
+				text-align: center;
+				margin: 0 auto;
+			}
+
+			.hero-logo {
+				max-width: 300px;
+				margin: 0 auto;
+			}
+		}
+
+		@media (max-width: 576px) {
+			.hero-logo {
+				max-width: 250px;
+			}
+		}
+	</style>
+</Layout>
