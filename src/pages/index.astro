@@ -2,6 +2,16 @@
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
 import Portada from '../assets/portada.jpg';
+import FestoLogo from '../assets/festologo.png';
+import FatekLogo from '../assets/fateklogo.png';
+import SiemensLogo from '../assets/siemenslogo.png';
+import OmronLogo from '../assets/omronlogo.png';
+import WeintekLogo from '../assets/weinteklogo.png';
+import CCGLogo from '../assets/ccglogo.png';
+import SewLogo from '../assets/sewlogo.png';
+import IFMLogo from '../assets/ifmlogo.png';
+import RexrothLogo from '../assets/rexrothlogo.png';
+import WEGLogo from '../assets/weglogo.png';
 ---
 
 <Layout title="Automatizar - Soluciones Tecnológicas para la Industria" url="https://www.automatizarsa.com.ar/">
@@ -43,7 +53,7 @@ import Portada from '../assets/portada.jpg';
 								<li>Controladores avanzados para procesos industriales</li>
 								<li>Instrumentación precisa y confiable</li>
 							</ul>
-							<a href="https://www.automatizarsa.com.ar/servicios/" class="category-link">
+							<a href="/servicios" class="category-link">
 								Ver más <i class="fas fa-arrow-right"></i>
 							</a>
 						</div>
@@ -59,7 +69,7 @@ import Portada from '../assets/portada.jpg';
 								<li>Instalación y configuración de equipos</li>
 								<li>Capacitación y soporte técnico continuo</li>
 							</ul>
-							<a href="https://www.automatizarsa.com.ar/servicios/" class="category-link">
+							<a href="/servicios" class="category-link">
 								Ver más <i class="fas fa-arrow-right"></i>
 							</a>
 						</div>
@@ -75,7 +85,7 @@ import Portada from '../assets/portada.jpg';
 								<li>Renovación y modernización de tecnología</li>
 								<li>Optimización de procesos y eficiencia</li>
 							</ul>
-							<a href="https://www.automatizarsa.com.ar/servicios/" class="category-link">
+							<a href="/servicios" class="category-link">
 								Ver más <i class="fas fa-arrow-right"></i>
 							</a>
 						</div>
@@ -92,7 +102,7 @@ import Portada from '../assets/portada.jpg';
 								<li>Mantenimiento continuo</li>
 								<li>Capacitación y soporte técnico continuo</li>
 							</ul>
-							<a href="https://www.automatizarsa.com.ar/servicios/" class="category-link">
+							<a href="/servicios" class="category-link">
 								Ver más <i class="fas fa-arrow-right"></i>
 							</a>
 						</div>
@@ -164,45 +174,45 @@ import Portada from '../assets/portada.jpg';
 						<div class="carousel-item active">
 							<div class="row g-2 justify-content-center">
 								<div class="col-md-3">
-									<img src="/src/assets/festologo.png" alt="Festo" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
+									<Image src={FestoLogo} alt="Festo" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
 								</div>
 								<div class="col-md-3">
-									<img src="/src/assets/fateklogo.png" alt="Fatek" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
+									<Image src={FatekLogo} alt="Fatek" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
 								</div>
 								<div class="col-md-3">
-									<img src="/src/assets/siemenslogo.png" alt="Siemens" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
+									<Image src={SiemensLogo} alt="Siemens" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
 								</div>
 								<div class="col-md-3">
-									<img src="/src/assets/festologo.png" alt="Festo" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
-								</div>
-							</div>
-						</div>
-						<div class="carousel-item">
-							<div class="row g-2 justify-content-center">
-								<div class="col-md-3">
-									<img src="/src/assets/omronlogo.png" alt="Omron" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
-								</div>
-								<div class="col-md-3">
-									<img src="/src/assets/weinteklogo.png" alt="Weintek" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
-								</div>
-								<div class="col-md-3">
-									<img src="/src/assets/ccglogo.png" alt="CCG" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
-								</div>
-								<div class="col-md-3">
-									<img src="/src/assets/sewlogo.png" alt="Sew" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
+									<Image src={FestoLogo} alt="Festo" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
 								</div>
 							</div>
 						</div>
 						<div class="carousel-item">
 							<div class="row g-2 justify-content-center">
 								<div class="col-md-3">
-									<img src="/src/assets/ifmlogo.png" alt="IFM" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
+									<Image src={OmronLogo} alt="Omron" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
 								</div>
 								<div class="col-md-3">
-									<img src="/src/assets/rexrothlogo.png" alt="Rexroth" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
+									<Image src={WeintekLogo} alt="Weintek" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
 								</div>
 								<div class="col-md-3">
-									<img src="/src/assets/weglogo.png" alt="WEG" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
+									<Image src={CCGLogo} alt="CCG" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
+								</div>
+								<div class="col-md-3">
+									<Image src={SewLogo} alt="Sew" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="row g-2 justify-content-center">
+								<div class="col-md-3">
+									<Image src={IFMLogo} alt="IFM" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
+								</div>
+								<div class="col-md-3">
+									<Image src={RexrothLogo} alt="Rexroth" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
+								</div>
+								<div class="col-md-3">
+									<Image src={WEGLogo} alt="WEG" class="img-fluid" style="max-height: 100px; object-fit: contain;" />
 								</div>
 							</div>
 						</div>
@@ -253,7 +263,7 @@ import Portada from '../assets/portada.jpg';
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(/src/assets/portada.jpg); /* Cambia por la URL de tu imagen */
+    background-image: url(${Portada}); /* Cambia por la URL de tu imagen */
     background-repeat: repeat; /* Hace el efecto de mosaico */
     background-size: auto; /* Mantiene el tamaño original de la imagen */
     background-position: top left;
@@ -388,8 +398,7 @@ import Portada from '../assets/portada.jpg';
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: url(/src/assets/portada.jpg) center/cover;
-				opacity: 0.1;
+		opacity: 0.1;
 	}
 
 	@media (max-width: 991px) {

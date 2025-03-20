@@ -1,7 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
-
+import Automation from '../assets/automation.jpeg';
+import LM from '../assets/lm.jpg';
+import ER from '../assets/er.jpg';
+import NC from '../assets/nc.jpg';
 ---
 
 <Layout title="Nosotros - Automatizar">
@@ -24,7 +27,7 @@ import { Image } from 'astro:assets';
 				<div class="row align-items-center g-5 text-center">
 					<div class="col-lg-6">
 						<div class="about-image">
-							<img src="src/assets/automation.jpeg" class="d-block w-100 img" alt="Portada">
+							<Image src={Automation} alt="Automation" class="d-block w-100 img" />
 						</div>
 					</div>
 					<div class="col-lg-6">
@@ -120,7 +123,7 @@ import { Image } from 'astro:assets';
 					<div class="col-md-4">
 						<div class="team-card">
 							<div class="team-image">
-								<img src="src/assets/LM.jpg" alt="Miembro del equipo" class="img-fluid" style="width: 100%; height: auto;">
+								<Image src={LM} alt="Miembro del equipo" class="img-fluid" style="width: 100%; height: auto;" />
 							</div>
 							<div class="team-content">
 								<h3>Luciano Mulki</h3>
@@ -132,7 +135,7 @@ import { Image } from 'astro:assets';
 					<div class="col-md-4">
 						<div class="team-card">
 							<div class="team-image">
-								<img src="src/assets/ER.jpg" alt="Miembro del equipo" class="img-fluid" style="width: 100%; height: auto;">
+								<Image src={ER} alt="Miembro del equipo" class="img-fluid" style="width: 100%; height: auto;" />
 							</div>
 							<div class="team-content">
 								<h3>Emanuel Rivero</h3>
@@ -144,7 +147,7 @@ import { Image } from 'astro:assets';
 					<div class="col-md-4">
 						<div class="team-card">
 							<div class="team-image">
-								<img src="src/assets/NC.jpg" alt="Miembro del equipo" class="img-fluid" style="width: 100%; height: auto;">
+								<Image src={NC} alt="Miembro del equipo" class="img-fluid" style="width: 100%; height: auto;" />
 							</div>
 							<div class="team-content">
 								<h3>Nicolas Coria</h3>
@@ -188,7 +191,6 @@ import { Image } from 'astro:assets';
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: url('/automatizar/images/about-hero.jpg') center/cover;
 		opacity: 0.2;
 	}
 
