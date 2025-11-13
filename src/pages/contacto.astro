@@ -109,7 +109,8 @@ import Layout from "../layouts/Layout.astro";
 											<a
 												href="https://wa.me/5493492205717?text=Hola%20automatizAR,%20soy%20( ),%20quería%20hacerte%20una%20consulta."
 												class="text-primary"
-												>Luciano: +54 9 3492 20-5717</a>
+												>Luciano: +54 9 3492 22-6054</a
+											>
 										</p>
 										<p class="mb-1">
 											<i
@@ -118,7 +119,8 @@ import Layout from "../layouts/Layout.astro";
 											<a
 												href="https://wa.me/5493492620419?text=Hola%20automatizAR,%20soy%20( ),%20quería%20hacerte%20una%20consulta."
 												class="text-primary"
-												>Emanuel: +54 9 3492 62-0419</a>
+												>Emanuel: +54 9 3492 62-0419</a
+											>
 										</p>
 										<p class="mb-1">
 											<i
@@ -127,7 +129,8 @@ import Layout from "../layouts/Layout.astro";
 											<a
 												href="https://wa.me/5493492328782?text=Hola%20automatizAR,%20soy%20( ),%20quería%20hacerte%20una%20consulta."
 												class="text-primary"
-												>Nicolás: +54 9 3492 32-8782</a>
+												>Nicolás: +54 9 3492 32-8782</a
+											>
 										</p>
 									</div>
 								</div>
@@ -242,7 +245,10 @@ import Layout from "../layouts/Layout.astro";
 								}
 							})
 							.catch((error) => {
-								console.log('Error en el envío del formulario:', error);
+								console.log(
+									"Error en el envío del formulario:",
+									error,
+								);
 								result.innerHTML = "Something went wrong!";
 							})
 							.then(function () {
